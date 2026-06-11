@@ -1,0 +1,272 @@
+/* ──────────────────────────────────────────────────────────
+   Antimatter Docs — custom CSS
+   Inspired by Stripe/FastAPI: clean, spacious, readable
+   ────────────────────────────────────────────────────────── */
+
+/* ---------- Root colour overrides (light) ---------- */
+:root {
+  --md-primary-fg-color: #673ab7;
+  --md-primary-fg-color--light: #9575cd;
+  --md-primary-fg-color--dark: #4527a0;
+  --md-accent-fg-color: #ffab00;
+  --md-typeset-a-color: #673ab7;
+}
+
+/* ---------- Root colour overrides (dark) ---------- */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #b39ddb;
+  --md-primary-fg-color--light: #d1c4e9;
+  --md-primary-fg-color--dark: #7e57c2;
+  --md-accent-fg-color: #ffd740;
+  --md-typeset-a-color: #b39ddb;
+  --md-default-bg-color: #1a1a2e;
+  --md-default-bg-color--light: #1f1f3a;
+  --md-default-bg-color--lighter: #25254a;
+  --md-default-fg-color: #e0e0e0;
+  --md-code-bg-color: #16162a;
+}
+
+/* ---------- Typography ---------- */
+.md-typeset {
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1em;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.4em;
+  margin-top: 2em;
+}
+
+/* ---------- Cards (grid) ---------- */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li,
+.md-typeset .grid > .card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  padding: 1.2em;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover,
+.md-typeset .grid > .card:hover {
+  border-color: var(--md-primary-fg-color--light);
+  box-shadow: 0 8px 24px rgba(103, 58, 183, 0.12);
+  transform: translateY(-3px);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li:hover,
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ol > li:hover,
+[data-md-color-scheme="slate"] .md-typeset .grid > .card:hover {
+  box-shadow: 0 8px 24px rgba(179, 157, 219, 0.18);
+}
+
+/* ---------- Admonitions ---------- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Code blocks ---------- */
+.md-typeset pre > code {
+  border-radius: 8px;
+}
+
+.md-typeset code {
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+}
+
+/* ---------- Tables ---------- */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background: var(--md-primary-fg-color--dark);
+}
+
+/* ---------- Navigation ---------- */
+.md-tabs {
+  background: var(--md-primary-fg-color);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- Hero section (index page) ---------- */
+.hero {
+  text-align: center;
+  padding: 2em 1em 3em;
+}
+
+.hero h1 {
+  font-size: 2.4em;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.3em;
+}
+
+.hero .hero-subtitle {
+  font-size: 1.15em;
+  color: var(--md-default-fg-color--light);
+  max-width: 600px;
+  margin: 0 auto 1.5em;
+  line-height: 1.6;
+}
+
+.hero .hero-buttons {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero .hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.75em 1.8em;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.hero .hero-buttons .md-button--primary {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+}
+
+.hero .hero-buttons .md-button--primary:hover {
+  background: var(--md-primary-fg-color--dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(103, 58, 183, 0.3);
+}
+
+.hero .hero-buttons .md-button--secondary {
+  border: 2px solid var(--md-primary-fg-color);
+  color: var(--md-primary-fg-color);
+  background: transparent;
+}
+
+.hero .hero-buttons .md-button--secondary:hover {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ---------- Badge row ---------- */
+.badge-row {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+/* ---------- Feature highlights ---------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5em;
+  margin: 2em 0;
+}
+
+.feature-grid .feature-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  padding: 1.5em;
+  transition: all 0.25s ease;
+}
+
+.feature-grid .feature-card:hover {
+  border-color: var(--md-primary-fg-color--light);
+  box-shadow: 0 6px 20px rgba(103, 58, 183, 0.1);
+  transform: translateY(-2px);
+}
+
+.feature-grid .feature-card .feature-icon {
+  font-size: 1.8em;
+  margin-bottom: 0.4em;
+}
+
+.feature-grid .feature-card h3 {
+  margin: 0.3em 0;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.feature-grid .feature-card p {
+  margin: 0;
+  font-size: 0.85em;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---------- Screenshots gallery ---------- */
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+.screenshot-gallery img {
+  border-radius: 12px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.screenshot-gallery img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Step cards (installation) ---------- */
+.step-card {
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  background: var(--md-default-bg-color--lighter);
+  border-radius: 0 8px 8px 0;
+}
+
+.step-card h3 {
+  margin-top: 0;
+}
+
+/* ---------- Content area max width ---------- */
+.md-content {
+  max-width: 900px;
+}
+
+/* ---------- Footer social ---------- */
+.md-footer-meta {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
