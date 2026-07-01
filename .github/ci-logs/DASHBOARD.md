@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-75%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-128-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-129-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 128 |
-| **Passed** | 96 |
+| **Total Runs** | 129 |
+| **Passed** | 97 |
 | **Failed** | 29 |
 | **Pass Rate** | 75% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-01 05:27 | Core CI | ✅ PASS | Hotfix | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28495679297) |
 | 2026-06-23 07:14 | Android CI | ✅ PASS | ci: add manual workflow dispatch for publishing to PyPI | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008938656) |
 | 2026-06-23 07:12 | iOS CI | ✅ PASS | ci: add manual workflow dispatch for publishing to PyPI | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008938631) |
 | 2026-06-23 07:06 | Android CI | ✅ PASS | chore: bump antimatter-gateway version to 2.0.5 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008563830) |
@@ -63,4 +64,3 @@
 | 2026-06-19 20:09 | Android CI | ❌ FAIL | chore: update root config and documentation | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846058508) |
 | 2026-06-19 20:07 | Adapters CI | ❌ FAIL | chore(deps): bump astro @astrojs/starlight and @astrojs/starlight-tailwind | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846157721) |
 | 2026-06-19 20:06 | iOS CI | ✅ PASS | chore(deps): bump astro @astrojs/starlight and @astrojs/starlight-tailwind | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846157693) |
-| 2026-06-19 20:06 | npm_and_yarn in /docs for astro |  @astrojs/starlight |  @astrojs/starlight-tailwind - Update #1423490383 | [View Log](✅ PASS,chore: update workflow dashboard,https://github.com/saifmukhtar/antimatter/actions/runs/27846110645) |
