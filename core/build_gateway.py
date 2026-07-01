@@ -1,3 +1,10 @@
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#     "tomli",
+#     "tomli-w",
+# ]
+# ///
 import os
 import shutil
 import subprocess
@@ -41,16 +48,34 @@ def build_gateway():
                         shutil.copytree(item, dest)
                         print(f"Bundled {item.name} into gateway/src")
         
-        # 3. Patch pyproject.toml to remove workspace dependencies
+        # 3. Patch pyproject.toml to remove workspace dependencies and auto-merge external ones
         pyproject_path = build_dir / "pyproject.toml"
         with open(pyproject_path, "rb") as f:
             pyproject = tomli.load(f)
             
-        # Remove shared dependencies
+        merged_dependencies = set()
+            
+        # Collect external dependencies from shared modules
+        for module in shared_modules:
+            shared_toml = core_dir / module / "pyproject.toml"
+            if shared_toml.exists():
+                with open(shared_toml, "rb") as f:
+                    shared_data = tomli.load(f)
+                    if "project" in shared_data and "dependencies" in shared_data["project"]:
+                        for d in shared_data["project"]["dependencies"]:
+                            if not d.startswith("antimatter-shared-"):
+                                merged_dependencies.add(d)
+        
+        # Merge with gateway dependencies
         if "project" in pyproject and "dependencies" in pyproject["project"]:
-            deps = pyproject["project"]["dependencies"]
-            new_deps = [d for d in deps if not d.startswith("antimatter-shared-")]
-            pyproject["project"]["dependencies"] = new_deps
+            gateway_deps = pyproject["project"]["dependencies"]
+            # Add existing gateway deps (excluding internal ones)
+            for d in gateway_deps:
+                if not d.startswith("antimatter-shared-"):
+                    merged_dependencies.add(d)
+            
+            # Apply merged dependencies back
+            pyproject["project"]["dependencies"] = sorted(list(merged_dependencies))
             
         # Remove tool.uv.sources for the shared dependencies
         if "tool" in pyproject and "uv" in pyproject["tool"] and "sources" in pyproject["tool"]["uv"]:

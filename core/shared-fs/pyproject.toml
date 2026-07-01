@@ -1,14 +1,16 @@
 [project]
-version = "2.0.1"
+version = "2.0.2"
 readme = "README.md"
 name = "antimatter-shared-fs"
 description = "Filesystem shared protocol components for Antimatter"
 dependencies = [
-    "antimatter-shared-protocol"
+    "antimatter-shared-protocol",
+    "antimatter-shared-config"
 ]
 
 [tool.uv.sources]
 antimatter-shared-protocol = { workspace = true }
+antimatter-shared-config = { workspace = true }
 
 
 [build-system]

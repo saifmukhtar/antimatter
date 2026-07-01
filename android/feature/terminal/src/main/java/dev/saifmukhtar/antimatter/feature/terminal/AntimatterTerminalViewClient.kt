@@ -19,7 +19,7 @@ class AntimatterTerminalViewClient(
     private val altActive: AtomicBoolean
 ) : TerminalViewClient {
 
-    private var currentSizeSp = 14f
+    private var currentSizeSp = 20f
 
     override fun onScale(scale: Float): Float {
         if (scale < 0.9f || scale > 1.1f) {

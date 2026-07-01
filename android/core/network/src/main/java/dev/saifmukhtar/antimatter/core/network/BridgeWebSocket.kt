@@ -143,7 +143,6 @@ class BridgeWebSocket(private val context: Context) {
                 override fun onOpen(webSocket: WebSocket, response: Response) {
                     Log.d("BridgeWebSocket", "Connected to $currentUrl")
                     isConnecting.set(false)
-                    reconnectAttempt = 0
                     
                     if (pubKey != null) {
                         val random = java.security.SecureRandom()
@@ -253,6 +252,7 @@ class BridgeWebSocket(private val context: Context) {
                                             Log.d("BridgeWebSocket", "Sent HELLO X25519 payload. E2EE Established.")
                                             
                                             updateConnectionState(ConnectionState.CONNECTED)
+                                            reconnectAttempt = 0
                                         } catch (e: Exception) {
                                             Log.e("BridgeWebSocket", "E2EE Handshake failed", e)
                                             webSocket.close(4003, "Crypto Error")

@@ -166,6 +166,7 @@ sealed class OutboundMessage {
     data class AuthChallenge(val challenge: String, val type: String = "AUTH_CHALLENGE", override val id: String? = null, override val agentId: String? = null) : OutboundMessage()
     data class GetArtifacts(val conversationId: String, val type: String = "GET_ARTIFACTS", override val id: String? = null, override val agentId: String? = null) : OutboundMessage()
     data class ReadArtifact(val conversationId: String, val path: String, val type: String = "READ_ARTIFACT", override val id: String? = null, override val agentId: String? = null) : OutboundMessage()
+    data class ListAgents(val type: String = "LIST_AGENTS", override val id: String? = null, override val agentId: String? = null) : OutboundMessage()
     
     data class WriteFile(val path: String, val content: String, val type: String = "WRITE_FILE", override val id: String? = null, override val agentId: String? = null) : OutboundMessage()
     data class ChangeWorkspace(val path: String, val type: String = "CHANGE_WORKSPACE", override val id: String? = null, override val agentId: String? = null) : OutboundMessage()

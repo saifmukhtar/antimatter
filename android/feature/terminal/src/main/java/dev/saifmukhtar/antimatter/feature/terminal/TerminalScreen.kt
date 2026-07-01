@@ -117,8 +117,8 @@ fun TerminalScreen(
                     terminalView.isFocusable            = true
                     terminalView.isFocusableInTouchMode = true
 
-                    // 14sp — Termux default text size
-                    var currentSizeSp = 14f
+                    // 20sp — Increased for better readability on mobile
+                    var currentSizeSp = 20f
                     terminalView.setTextSize(currentSizeSp.toInt())
 
                     terminalView.attachSession(viewModel.terminalSession)

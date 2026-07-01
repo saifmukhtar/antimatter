@@ -12,6 +12,12 @@ class AntimatterConfig(BaseModel):
     pairing_token: str | None = None
     private_key_pem: str | None = None
     allowed_workspaces: list[str] = Field(default_factory=list)
+    ignored_folders: list[str] = Field(default_factory=lambda: [
+        'node_modules', '.git', 'dist', 'build', 'out', 
+        '.gradle', '__pycache__', '.venv', 'venv', 
+        '.idea', '.DS_Store', '.kotlin', 'gradle-user-home',
+        'Pods', '.cxx', '.dart_tool'
+    ])
 
 from .secure_store import get_secret, set_secret
 

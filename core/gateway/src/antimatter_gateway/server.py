@@ -120,10 +120,11 @@ class GatewayServer:
                         await websocket.close(1008, "Missing challenge")
                         return
                     
-                    # Auth material logged at DEBUG only — not INFO (AM-008)
                     logger.debug(f"Received challenge: {challenge}")
                     sig = self.auth.sign_challenge(challenge)
                     logger.debug(f"Generated signature: {sig}")
+                    
+                    session_e2ee = E2EESession("gateway")
                     
                     # Send ephemeral pubkey so Android does ECDH with this session's key
                     await websocket.send(json.dumps({
@@ -221,7 +222,7 @@ class GatewayServer:
         logger.info(f"Gateway running. Access via: {tunnel_url or 'ws://127.0.0.1:' + str(self.port)}")
         logger.info("Run 'antimatter qr' to view the pairing code.")
 
-        async with websockets.serve(self.handler, "127.0.0.1", self.port, max_size=None):
+        async with websockets.serve(self.handler, "127.0.0.1", self.port, max_size=None, ping_interval=None, ping_timeout=None):
             await asyncio.Future()
 
 async def main_async(port: int = 8765):

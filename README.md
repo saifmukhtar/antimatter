@@ -123,6 +123,20 @@ Explore the depths of the ecosystem:
 > }
 > ```
 
+> **Workspace Exclusions**  
+> The Android app loads your file tree in real-time. To prevent performance issues or hanging on massive caches (like Android build folders or `node_modules`), the gateway ignores specific folders. You can customize this by setting the `ignored_folders` list in your `~/.antimatter_daemon/config.json`:
+> ```json
+> {
+>     "ignored_folders": [
+>         "node_modules", ".git", "dist", "build", "out",
+>         ".gradle", "__pycache__", ".venv", "venv",
+>         ".idea", ".DS_Store", ".kotlin", "gradle-user-home",
+>         "Pods", ".cxx", ".dart_tool"
+>     ]
+> }
+> ```
+> *(Changes to this list take effect instantly on the next file tree load).*
+
 ---
 
 ## Star History

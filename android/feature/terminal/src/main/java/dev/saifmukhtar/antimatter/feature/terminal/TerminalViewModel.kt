@@ -110,13 +110,18 @@ class TerminalViewModel @Inject constructor(
                 // This avoids the 50ms busy-poll that wastes CPU when idle.
                 inputReadyChannel.receive()
 
-                val bytesRead = terminalSession.readInput(buffer, false)
-                if (bytesRead > 0) {
-                    val id = ptyId
-                    if (id != null) {
-                        val dataB64 = android.util.Base64.encodeToString(buffer, 0, bytesRead, android.util.Base64.NO_WRAP)
-                        val inputMsg = OutboundMessage.PtyInput(id, dataB64)
-                        webSocket.sendMessage(inputMsg)
+                // Drain the input buffer completely
+                while (isActive) {
+                    val bytesRead = terminalSession.readInput(buffer, false)
+                    if (bytesRead > 0) {
+                        val id = ptyId
+                        if (id != null) {
+                            val dataB64 = android.util.Base64.encodeToString(buffer, 0, bytesRead, android.util.Base64.NO_WRAP)
+                            val inputMsg = OutboundMessage.PtyInput(id, dataB64)
+                            webSocket.sendMessage(inputMsg)
+                        }
+                    } else {
+                        break // No more data right now, go back to waiting
                     }
                 }
             }

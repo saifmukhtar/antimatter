@@ -35,6 +35,9 @@ class FilesViewModel @Inject constructor(
     val uiState: StateFlow<FilesUiState> = _uiState.asStateFlow()
 
     init {
+        // Fetch current workspace and allowed workspaces
+        webSocket.sendMessage(OutboundMessage.ListAgents())
+
         viewModelScope.launch(Dispatchers.Main.immediate) {
             webSocket.messages.collect { message ->
                 when (message) {

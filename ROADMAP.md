@@ -76,7 +76,7 @@ Planned features and architectural improvements for the Antimatter ecosystem. It
 
 | Feature | Status | Notes |
 |---|---|---|
-| Decentralized Global Usernames | <span class="badge badge-planned">◦ Planned</span> | Solve Zooko's Triangle without requiring crypto fees or a central server |
+| Decentralized Global Usernames | <span class="badge badge-planned">◦ Planned</span> | Solve Zooko's Triangle without requiring crypto fees or a central server. Potential avenues include Hyperswarm DHT routing, Tor Hidden Services (.onion), or Web-of-Trust (WoT) mechanisms to map human-readable names to public keys. The goal is to provide a seamless Web2-like UX (e.g. `connect@username`) while maintaining strict Web3/P2P ethos: no central authority, no subscription fees, no domain squatting by design. |
 
 ## Developer Experience
 
