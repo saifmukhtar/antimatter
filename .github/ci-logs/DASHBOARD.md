@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
-![Pass Rate](https://img.shields.io/badge/Pass%20Rate-75%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-137-blue)
+![Pass Rate](https://img.shields.io/badge/Pass%20Rate-76%25-brightgreen)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-138-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 137 |
-| **Passed** | 104 |
+| **Total Runs** | 138 |
+| **Passed** | 105 |
 | **Failed** | 30 |
-| **Pass Rate** | 75% |
+| **Pass Rate** | 76% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-01 05:51 | iOS CI | ✅ PASS | Delete test_find_large2.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496630533) |
 | 2026-07-01 05:51 | Adapters CI | ✅ PASS | Delete test_find_large.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496613807) |
 | 2026-07-01 05:50 | iOS CI | ✅ PASS | Delete test_find_large.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496613830) |
 | 2026-07-01 05:50 | Adapters CI | ✅ PASS | Delete test_daemon.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496600200) |
@@ -63,4 +64,3 @@
 | 2026-06-20 07:40 | Adapters CI | ✅ PASS | Include Star History in README | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27864535145) |
 | 2026-06-20 07:40 | Core CI | ✅ PASS | Include Star History in README | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27864535138) |
 | 2026-06-19 20:28 | Deploy Docs to Cloudflare Pages | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846984790) |
-| 2026-06-19 20:21 | Android CI | ✅ PASS | test(connect): fix NullPointerException in ConnectionViewModelTest | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846409856) |
