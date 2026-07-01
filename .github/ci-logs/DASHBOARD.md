@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-75%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-149-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-150-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 149 |
+| **Total Runs** | 150 |
 | **Passed** | 113 |
-| **Failed** | 33 |
+| **Failed** | 34 |
 | **Pass Rate** | 75% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_uri.kt | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496755947) |
 | 2026-07-01 05:56 | Android CI | ❌ FAIL | Delete test_daemon.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496600211) |
 | 2026-07-01 05:56 | Android CI | ❌ FAIL | Delete test_find_large2.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496630623) |
 | 2026-07-01 05:55 | Android CI | ❌ FAIL | Delete test_find_large.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496613799) |
@@ -63,4 +64,3 @@
 | 2026-06-20 11:44 | Adapters CI | ✅ PASS | chore(deps): bump pydantic-settings in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870138561) |
 | 2026-06-20 11:43 | uv in /adapters/ag2 for pydantic-settings - Update #1425076273 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870116707) |
 | 2026-06-20 11:43 | npm_and_yarn in /docs for esbuild - Update #1425075984 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870112875) |
-| 2026-06-20 11:29 | Android CI | ✅ PASS | Merge pull request #4 from saifmukhtar/dependabot/npm_and_yarn/docs/multi-470afd2faf | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27869765745) |
