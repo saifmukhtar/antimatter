@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-76%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-138-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-139-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 138 |
-| **Passed** | 105 |
+| **Total Runs** | 139 |
+| **Passed** | 106 |
 | **Failed** | 30 |
 | **Pass Rate** | 76% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-01 05:51 | Adapters CI | ✅ PASS | Delete test_find_large2.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496630527) |
 | 2026-07-01 05:51 | iOS CI | ✅ PASS | Delete test_find_large2.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496630533) |
 | 2026-07-01 05:51 | Adapters CI | ✅ PASS | Delete test_find_large.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496613807) |
 | 2026-07-01 05:50 | iOS CI | ✅ PASS | Delete test_find_large.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496613830) |
@@ -63,4 +64,3 @@
 | 2026-06-20 07:42 | Android CI | ✅ PASS | Include Star History in README | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27864535134) |
 | 2026-06-20 07:40 | Adapters CI | ✅ PASS | Include Star History in README | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27864535145) |
 | 2026-06-20 07:40 | Core CI | ✅ PASS | Include Star History in README | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27864535138) |
-| 2026-06-19 20:28 | Deploy Docs to Cloudflare Pages | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846984790) |
