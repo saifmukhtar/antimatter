@@ -145,3 +145,4 @@ Date,Workflow,Status,Commit,URL
 2026-07-01 05:54,Adapters CI,✅ PASS,Delete test_tree.py,https://github.com/saifmukhtar/antimatter/actions/runs/28496745443
 2026-07-01 05:54,Adapters CI,✅ PASS,Delete test_uri.kt,https://github.com/saifmukhtar/antimatter/actions/runs/28496755904
 2026-07-01 05:54,Adapters CI,✅ PASS,Delete test_ws.py,https://github.com/saifmukhtar/antimatter/actions/runs/28496766565
+2026-07-01 05:55,Android CI,❌ FAIL,Delete test_find_large.py,https://github.com/saifmukhtar/antimatter/actions/runs/28496613799
