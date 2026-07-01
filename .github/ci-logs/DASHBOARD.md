@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-74%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-151-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-152-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 151 |
+| **Total Runs** | 152 |
 | **Passed** | 113 |
-| **Failed** | 35 |
+| **Failed** | 36 |
 | **Pass Rate** | 74% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_ws.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496766514) |
 | 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_tree.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496745442) |
 | 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_uri.kt | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496755947) |
 | 2026-07-01 05:56 | Android CI | ❌ FAIL | Delete test_daemon.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496600211) |
@@ -63,4 +64,3 @@
 | 2026-06-20 12:04 | iOS CI | ✅ PASS | docs: add decentralized connectivity architectures to roadmap | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870617402) |
 | 2026-06-20 11:45 | Android CI | ✅ PASS | chore(deps): bump pydantic-settings in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870138572) |
 | 2026-06-20 11:44 | Adapters CI | ✅ PASS | chore(deps): bump pydantic-settings in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870138561) |
-| 2026-06-20 11:43 | uv in /adapters/ag2 for pydantic-settings - Update #1425076273 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870116707) |
