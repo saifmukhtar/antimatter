@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-75%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-135-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-136-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 135 |
-| **Passed** | 102 |
+| **Total Runs** | 136 |
+| **Passed** | 103 |
 | **Failed** | 30 |
 | **Pass Rate** | 75% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-01 05:50 | iOS CI | ✅ PASS | Delete test_find_large.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496613830) |
 | 2026-07-01 05:50 | Adapters CI | ✅ PASS | Delete test_daemon.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496600200) |
 | 2026-07-01 05:50 | Adapters CI | ✅ PASS | Delete test.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496583990) |
 | 2026-07-01 05:50 | iOS CI | ✅ PASS | Delete test.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496583986) |
@@ -63,4 +64,3 @@
 | 2026-06-19 20:28 | Deploy Docs to Cloudflare Pages | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846984790) |
 | 2026-06-19 20:21 | Android CI | ✅ PASS | test(connect): fix NullPointerException in ConnectionViewModelTest | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846409856) |
 | 2026-06-19 20:16 | Android CI | ❌ FAIL | fix(ag): add missing fetchHistoryPage method to BrainWatcher | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846333368) |
-| 2026-06-19 20:13 | Adapters CI | ✅ PASS | test(connect): fix NullPointerException in ConnectionViewModelTest | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846410029) |
