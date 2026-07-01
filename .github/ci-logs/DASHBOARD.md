@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-75%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-131-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-132-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 131 |
+| **Total Runs** | 132 |
 | **Passed** | 99 |
-| **Failed** | 29 |
+| **Failed** | 30 |
 | **Pass Rate** | 75% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-01 05:32 | Android CI | ❌ FAIL | Hotfix | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28495679290) |
 | 2026-07-01 05:27 | Graph Update: uv in /core #1442957591 | ✅ PASS | Hotfix | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28495680834) |
 | 2026-07-01 05:27 | Adapters CI | ✅ PASS | Hotfix | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28495679313) |
 | 2026-07-01 05:27 | Core CI | ✅ PASS | Hotfix | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28495679297) |
@@ -63,4 +64,3 @@
 | 2026-06-19 20:13 | iOS CI | ✅ PASS | test(connect): fix NullPointerException in ConnectionViewModelTest | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846409892) |
 | 2026-06-19 20:11 | Adapters CI | ✅ PASS | fix(ag): add missing fetchHistoryPage method to BrainWatcher | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846333358) |
 | 2026-06-19 20:11 | Core CI | ✅ PASS | fix(ag): add missing fetchHistoryPage method to BrainWatcher | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846333340) |
-| 2026-06-19 20:09 | Android CI | ❌ FAIL | chore: update root config and documentation | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27846058508) |

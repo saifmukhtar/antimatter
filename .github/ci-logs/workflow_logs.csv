@@ -130,3 +130,4 @@ Date,Workflow,Status,Commit,URL
 2026-07-01 05:27,Core CI,✅ PASS,Hotfix,https://github.com/saifmukhtar/antimatter/actions/runs/28495679297
 2026-07-01 05:27,Adapters CI,✅ PASS,Hotfix,https://github.com/saifmukhtar/antimatter/actions/runs/28495679313
 2026-07-01 05:27,Graph Update: uv in /core #1442957591,✅ PASS,Hotfix,https://github.com/saifmukhtar/antimatter/actions/runs/28495680834
+2026-07-01 05:32,Android CI,❌ FAIL,Hotfix,https://github.com/saifmukhtar/antimatter/actions/runs/28495679290
