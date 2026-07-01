@@ -128,3 +128,4 @@ Date,Workflow,Status,Commit,URL
 2026-06-23 07:12,iOS CI,✅ PASS,ci: add manual workflow dispatch for publishing to PyPI,https://github.com/saifmukhtar/antimatter/actions/runs/28008938631
 2026-06-23 07:14,Android CI,✅ PASS,ci: add manual workflow dispatch for publishing to PyPI,https://github.com/saifmukhtar/antimatter/actions/runs/28008938656
 2026-07-01 05:27,Core CI,✅ PASS,Hotfix,https://github.com/saifmukhtar/antimatter/actions/runs/28495679297
+2026-07-01 05:27,Adapters CI,✅ PASS,Hotfix,https://github.com/saifmukhtar/antimatter/actions/runs/28495679313
