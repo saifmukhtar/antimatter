@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
-![Pass Rate](https://img.shields.io/badge/Pass%20Rate-76%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-143-blue)
+![Pass Rate](https://img.shields.io/badge/Pass%20Rate-77%25-brightgreen)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-144-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 143 |
-| **Passed** | 110 |
+| **Total Runs** | 144 |
+| **Passed** | 111 |
 | **Failed** | 30 |
-| **Pass Rate** | 76% |
+| **Pass Rate** | 77% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-01 05:54 | Adapters CI | ✅ PASS | Delete test_tree.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496745443) |
 | 2026-07-01 05:54 | Core CI | ✅ PASS | Delete test_tree.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496745445) |
 | 2026-07-01 05:52 | iOS CI | ✅ PASS | Delete test_qr.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496675858) |
 | 2026-07-01 05:52 | Adapters CI | ✅ PASS | Delete test_find_large3.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496659322) |
@@ -63,4 +64,3 @@
 | 2026-06-20 11:27 | Core CI | ✅ PASS | Merge pull request #4 from saifmukhtar/dependabot/npm_and_yarn/docs/multi-470afd2faf | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27869765754) |
 | 2026-06-20 11:27 | iOS CI | ✅ PASS | chore(docs): clean up duplicate testing-status file and ignore auto-generated docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27869748577) |
 | 2026-06-20 11:22 | Android CI | ✅ PASS | Merge pull request #6 from saifmukhtar/dependabot/npm_and_yarn/adapters/ag/undici-7.28.0 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27869599692) |
-| 2026-06-20 11:20 | Core CI | ✅ PASS | Merge pull request #6 from saifmukhtar/dependabot/npm_and_yarn/adapters/ag/undici-7.28.0 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27869599718) |
