@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-74%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-153-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-154-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 153 |
-| **Passed** | 114 |
+| **Total Runs** | 154 |
+| **Passed** | 115 |
 | **Failed** | 36 |
 | **Pass Rate** | 74% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-02 08:56 | Adapters CI | ✅ PASS | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577916562) |
 | 2026-07-02 08:56 | Core CI | ✅ PASS | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577916553) |
 | 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_ws.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496766514) |
 | 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_tree.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496745442) |
@@ -63,4 +64,3 @@
 | 2026-06-20 12:05 | Android CI | ✅ PASS | docs: add decentralized connectivity architectures to roadmap | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870617408) |
 | 2026-06-20 12:04 | Adapters CI | ✅ PASS | docs: add decentralized connectivity architectures to roadmap | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870617407) |
 | 2026-06-20 12:04 | iOS CI | ✅ PASS | docs: add decentralized connectivity architectures to roadmap | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870617402) |
-| 2026-06-20 11:45 | Android CI | ✅ PASS | chore(deps): bump pydantic-settings in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870138572) |
