@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Network Security Configuration for Antimatter.
+
+    Cleartext traffic (ws://, http://) is permitted globally.
+
+    WHY THIS IS SAFE:
+    Antimatter implements End-to-End Encryption at the application layer using
+    X25519 ECDH key exchange + AES-256-GCM authenticated encryption. Every single
+    message is encrypted and authenticated before it leaves the device, regardless
+    of the transport layer. An attacker intercepting ws:// traffic on a local
+    network sees only opaque, tamper-proof ciphertext — identical to what they
+    would see intercepting wss:// traffic after TLS is stripped.
+
+    The QR code pairing already establishes out-of-band trust via an Ed25519
+    public key, which is cryptographically stronger than a TLS certificate for
+    this use case. TLS on the transport layer would be redundant encryption.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

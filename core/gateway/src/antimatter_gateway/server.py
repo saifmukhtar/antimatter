@@ -3,6 +3,7 @@ import json
 import logging
 import logging.handlers
 import os
+import socket
 import sys
 import signal
 import secrets
@@ -17,6 +18,41 @@ from antimatter_crypto.e2ee import E2EESession
 from .router import MessageRouter
 
 logger = logging.getLogger(__name__)
+
+def get_local_ip() -> str | None:
+    """Discover the machine's primary LAN IP by connecting a UDP socket."""
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+            # Does not actually send a packet; just resolves the outbound interface.
+            s.connect(("8.8.8.8", 80))
+            return s.getsockname()[0]
+    except Exception:
+        return None
+
+def prompt_connection_mode() -> str:
+    """Interactively ask the user how they want to connect."""
+    print()
+    print("=" * 55)
+    print("  HOW WOULD YOU LIKE TO CONNECT TO ANTIMATTER?")
+    print("=" * 55)
+    print("  1. Local Network (LAN)")
+    print("     └ Fast, works on the same Wi-Fi. No domain needed.")
+    print("  2. Cloudflare Tunnel")
+    print("     └ Remote access over the internet via your domain.")
+    print("  3. Both")
+    print("     └ LAN at home + Cloudflare when away.")
+    print("=" * 55)
+    while True:
+        choice = input("  Choice (1/2/3) [default: 3]: ").strip()
+        if choice == "" or choice == "3":
+            return "both"
+        elif choice == "1":
+            return "lan"
+        elif choice == "2":
+            return "cloudflare"
+        else:
+            print("  Invalid choice. Please enter 1, 2, or 3.")
+
 
 # IPC token file — readable only by the owning user (0o600)
 IPC_TOKEN_PATH = Path(os.path.expanduser("~/.antimatter_daemon/.ipc_token"))
@@ -214,20 +250,38 @@ class GatewayServer:
         finally:
             await self.router.unregister_adapter(agent_id)
 
-    async def start(self):
-        logger.info("Starting Gateway WebSocket server on ws://127.0.0.1:8765")
-        
-        tunnel_url = self.config.cloudflare_url
-        
-        logger.info(f"Gateway running. Access via: {tunnel_url or 'ws://127.0.0.1:' + str(self.port)}")
-        logger.info("Run 'antimatter qr' to view the pairing code.")
+    async def start(self, mode: str = "both"):
+        local_ip = get_local_ip()
 
-        async with websockets.serve(self.handler, "127.0.0.1", self.port, max_size=None, ping_interval=None, ping_timeout=None):
-            await asyncio.Future()
+        bind_addresses: list[str] = ["127.0.0.1"]
+        if mode in ("lan", "both") and local_ip:
+            bind_addresses.append(local_ip)
 
-async def main_async(port: int = 8765):
+        log_parts = []
+        if mode in ("cloudflare", "both") and self.config.cloudflare_url:
+            log_parts.append(f"Cloudflare: {self.config.cloudflare_url}")
+        if mode in ("lan", "both") and local_ip:
+            log_parts.append(f"LAN: ws://{local_ip}:{self.port}")
+        if not log_parts:
+            log_parts.append(f"Localhost: ws://127.0.0.1:{self.port}")
+
+        servers = []
+        for addr in bind_addresses:
+            servers.append(
+                await websockets.serve(
+                    self.handler, addr, self.port,
+                    max_size=None, ping_interval=None, ping_timeout=None
+                )
+            )
+
+        logger.info("Gateway running. Access via: %s", " | ".join(log_parts))
+        logger.info("Run 'antimatter-gateway pair' to view the pairing QR code.")
+
+        await asyncio.Future()  # run forever
+
+async def main_async(port: int = 8765, mode: str = "both"):
     server = GatewayServer(port=port)
-    await server.start()
+    await server.start(mode=mode)
 
 def daemonize(log_path: Path, pid_path: Path):
     if pid_path.exists():
@@ -333,7 +387,7 @@ def main():
     subparsers.add_parser("status", help="Check the status of the gateway daemon")
 
     # Interactive Setup Command
-    subparsers.add_parser("setup", help="Interactive setup for Cloudflare Zero Trust")
+    subparsers.add_parser("setup", help="Interactive setup: connection mode, Cloudflare, allowed workspaces")
     
     # QR Command
     subparsers.add_parser("pair", help="Show the pairing QR code and exit")
@@ -354,9 +408,12 @@ def main():
         logging.getLogger("websockets.server").setLevel(logging.CRITICAL)
     
     if args.command == "start":
-        print(f"Starting Antimatter Gateway in background... (Logs: {log_path})")
+        # Always ask every time — mode is never persisted so user
+        # can freely switch between LAN and Cloudflare on each run.
+        mode = prompt_connection_mode()
+        print(f"\nStarting Antimatter Gateway in background... (Logs: {log_path})")
         daemonize(log_path, pid_path)
-        asyncio.run(main_async(args.port))
+        asyncio.run(main_async(args.port, mode=mode))
         return
 
     if args.command == "stop":
@@ -370,28 +427,38 @@ def main():
     if args.command == "setup":
         import getpass
         config = load_config()
-        print("="*50)
-        print("ANTIMATTER GATEWAY SETUP")
-        print("="*50)
-        
-        # URL
-        url_prompt = f"Enter Cloudflare WebSocket URL (current: {config.cloudflare_url or 'None'}): "
-        url_input = input(url_prompt).strip()
-        if url_input:
-            config.cloudflare_url = url_input
-            
-        # Client ID
-        id_prompt = f"Enter Cloudflare Client ID (current: {config.cloudflare_client_id or 'None'}): "
-        id_input = input(id_prompt).strip()
-        if id_input:
-            config.cloudflare_client_id = id_input
-            
-        # Client Secret (hidden)
-        sec_prompt = "Enter Cloudflare Client Secret (hidden) [leave blank to keep current]: "
-        sec_input = getpass.getpass(sec_prompt).strip()
-        if sec_input:
-            config.cloudflare_client_secret = sec_input
-            
+
+        # Step 1: Connection mode
+        print()
+        current_mode = config.connection_mode or "not set"
+        print(f"Current connection mode: {current_mode.upper()}")
+        new_mode = prompt_connection_mode()
+        config.connection_mode = new_mode
+
+        # Step 2: Cloudflare details (only if mode requires it)
+        if new_mode in ("cloudflare", "both"):
+            print()
+            print("=" * 55)
+            print("  CLOUDFLARE TUNNEL CONFIGURATION")
+            print("=" * 55)
+
+            url_prompt = f"Enter Cloudflare WebSocket URL (current: {config.cloudflare_url or 'None'}): "
+            url_input = input(url_prompt).strip()
+            if url_input:
+                config.cloudflare_url = url_input
+
+            id_prompt = f"Enter Cloudflare Client ID (current: {config.cloudflare_client_id or 'None'}): "
+            id_input = input(id_prompt).strip()
+            if id_input:
+                config.cloudflare_client_id = id_input
+
+            sec_prompt = "Enter Cloudflare Client Secret (hidden) [leave blank to keep current]: "
+            sec_input = getpass.getpass(sec_prompt).strip()
+            if sec_input:
+                config.cloudflare_client_secret = sec_input
+        else:
+            print("\n  ⏭  Skipping Cloudflare configuration (LAN mode selected).")
+
         save_config(config)
         print("\n✅ Configuration saved securely!")
         return

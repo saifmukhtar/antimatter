@@ -55,13 +55,13 @@ Once installed, you have access to a suite of clean, simple terminal commands:
    ```bash
    antimatter-gateway start
    ```
-   *The gateway now detaches and runs silently in the background. Logs are written to `~/.antimatter_daemon/gateway.log`.*
+   *You will be prompted to choose your connection mode: Local Network (LAN), Cloudflare Tunnel, or Both. The gateway then detaches and runs silently in the background. Logs are written to `~/.antimatter_daemon/gateway.log`.*
 
 2. **Pair your Device:**
    ```bash
    antimatter-gateway pair
    ```
-   Scan the generated QR code using the Antimatter Android App.
+   *Select the connection method you want to pair with, then scan the generated QR code using the Antimatter Android App.*
 
 3. **Start an Agent:**
    Open a new terminal and start your preferred AI agent adapter:
@@ -89,4 +89,12 @@ By default, the Gateway restricts the mobile app's Workspace Explorer to only ac
 
 ## 🔒 Security Architecture
 
-Antimatter uses **Cloudflare Quick Tunnels** to expose the local gateway to the mobile app, but it treats the tunnel as an **untrusted medium**. All payloads are encrypted locally on the Android device using `AES-GCM` before transmission and are decrypted locally by the PC Gateway using a pre-shared Elliptic Curve Diffie-Hellman (ECDH) key exchange.
+Antimatter relies entirely on **Application-Layer End-to-End Encryption (E2EE)** using `AES-256-GCM` with a pre-shared Elliptic Curve Diffie-Hellman (ECDH) key exchange. This ensures your data is 100% locally encrypted on the Android device before transmission and is decrypted locally by the PC Gateway.
+
+Because of this robust E2EE architecture, Antimatter is secure over any transport medium:
+- **Cloudflare Quick Tunnels**: Treats the tunnel as an untrusted medium. Cloudflare cannot read your traffic.
+- **Local Network (LAN)**: Connects directly via WebSocket (`ws://`). Even though the transport layer is not TLS-encrypted, the E2EE layer ensures that anyone sniffing your local network sees only opaque, tamper-proof ciphertext.
+
+> [!WARNING]
+> **Dynamic Connection Modes**
+> You are prompted to choose your connection mode (LAN or Cloudflare) every time you start the gateway. This preference is never saved, giving you the flexibility to switch seamlessly based on your current network environment without modifying configuration files.

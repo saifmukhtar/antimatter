@@ -64,6 +64,7 @@ Install the core infrastructure using `uv` (or `pip`):
 uv tool install antimatter-gateway
 antimatter-gateway start
 ```
+*Upon starting, you will be prompted to dynamically select your preferred connection mode: Local Network (LAN), Cloudflare Tunnel, or Both.*
 
 ### 2. Install Your Adapter
 Install the adapter for the AI you are using. For example, for the Antigravity IDE:
@@ -72,7 +73,12 @@ Install the adapter for the AI you are using. For example, for the Antigravity I
 ### 3. Pair Your Phone
 1. Download the **Antimatter Android App** from F-Droid or GitHub Releases.
 2. In your terminal running the gateway, type `antimatter-gateway pair` to generate a secure QR code.
-3. Scan the code with the app. You are now cryptographically paired!
+3. *Choose which connection method you want to pair with (LAN or Cloudflare).*
+4. Scan the code with the app. You are now cryptographically paired!
+
+> [!WARNING]
+> **Connection Mode Selection**
+> Antimatter does not save your connection preference. You can dynamically choose between Local Network (LAN) and Cloudflare Tunnel on every `start` and `pair` command, without modifying any configuration files. When connecting over LAN, the app relies on robust Application-Layer E2EE rather than TLS, maintaining full security without requiring manual certificate installation.
 
 ---
 
