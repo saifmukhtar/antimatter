@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-74%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-156-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-157-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 156 |
-| **Passed** | 116 |
+| **Total Runs** | 157 |
+| **Passed** | 117 |
 | **Failed** | 37 |
 | **Pass Rate** | 74% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-16 20:58 | uv in /adapters/ag2 for mcp - Update #1464083639 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29534174062) |
 | 2026-07-02 09:01 | Android CI | ❌ FAIL | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577916650) |
 | 2026-07-02 08:56 | Graph Update: pip in /core/gateway #1445075585 | ✅ PASS | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577919133) |
 | 2026-07-02 08:56 | Adapters CI | ✅ PASS | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577916562) |
@@ -63,4 +64,3 @@
 | 2026-06-20 12:11 | Android CI | ✅ PASS | docs: add Tailscale to connectivity roadmap | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870748395) |
 | 2026-06-20 12:10 | Adapters CI | ✅ PASS | docs: add Tailscale to connectivity roadmap | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870748400) |
 | 2026-06-20 12:10 | iOS CI | ✅ PASS | docs: add Tailscale to connectivity roadmap | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870748399) |
-| 2026-06-20 12:05 | Android CI | ✅ PASS | docs: add decentralized connectivity architectures to roadmap | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27870617408) |
