@@ -156,3 +156,4 @@ Date,Workflow,Status,Commit,URL
 2026-07-02 08:56,Graph Update: pip in /core/gateway #1445075585,✅ PASS,Added LAN support and proper selection b/w LAN and Cloudflare,https://github.com/saifmukhtar/antimatter/actions/runs/28577919133
 2026-07-02 09:01,Android CI,❌ FAIL,Added LAN support and proper selection b/w LAN and Cloudflare,https://github.com/saifmukhtar/antimatter/actions/runs/28577916650
 2026-07-16 20:58,uv in /adapters/ag2 for mcp - Update #1464083639,✅ PASS,chore: update workflow dashboard,https://github.com/saifmukhtar/antimatter/actions/runs/29534174062
+2026-07-16 20:58,Core CI,✅ PASS,chore(deps): bump mcp from 1.28.0 to 1.28.1 in /adapters/ag2,https://github.com/saifmukhtar/antimatter/actions/runs/29534234670
