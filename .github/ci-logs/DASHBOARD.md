@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
-![Pass Rate](https://img.shields.io/badge/Pass%20Rate-73%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-168-blue)
+![Pass Rate](https://img.shields.io/badge/Pass%20Rate-72%25-brightgreen)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-169-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 168 |
+| **Total Runs** | 169 |
 | **Passed** | 123 |
-| **Failed** | 42 |
-| **Pass Rate** | 73% |
+| **Failed** | 43 |
+| **Pass Rate** | 72% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-21 20:49 | npm_and_yarn in /docs for astro - Update #1472547213 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29867323345) |
 | 2026-07-21 19:30 | npm_and_yarn in /docs for astro - Update #1472389316 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29861747491) |
 | 2026-07-21 18:57 | npm_and_yarn in /adapters/ag for brace-expansion - Update #1472324935 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29859326476) |
 | 2026-07-21 10:23 | npm_and_yarn in /docs for astro - Update #1471063809 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29821967000) |
@@ -63,4 +64,3 @@
 | 2026-06-23 07:01 | Graph Update: uv in /adapters/ag2 #1431117364 | ✅ PASS | Merge pull request #10 from saifmukhtar/dependabot/uv/adapters/ag2/pydantic-settings-2.14.2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008383150) |
 | 2026-06-23 07:00 | iOS CI | ✅ PASS | Merge pull request #10 from saifmukhtar/dependabot/uv/adapters/ag2/pydantic-settings-2.14.2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008380102) |
 | 2026-06-23 06:59 | Android CI | ✅ PASS | Merge pull request #11 from martofeld/patch-1 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008236459) |
-| 2026-06-23 06:58 | Adapters CI | ✅ PASS | Merge pull request #11 from martofeld/patch-1 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008236471) |
