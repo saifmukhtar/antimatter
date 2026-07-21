@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-74%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-162-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-163-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 162 |
-| **Passed** | 121 |
+| **Total Runs** | 163 |
+| **Passed** | 122 |
 | **Failed** | 38 |
 | **Pass Rate** | 74% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-21 10:17 | Core CI | ✅ PASS | chore(deps): bump astro and @astrojs/starlight in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29821614908) |
 | 2026-07-21 10:16 | npm_and_yarn in /docs for astro - Update #1471047195 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29821511562) |
 | 2026-07-18 00:47 | Graph Update: uv in /adapters/ag2 |  /core #1465876407 | ✅ PASS | [View Log](chore: update workflow dashboard,https://github.com/saifmukhtar/antimatter/actions/runs/29623834988) |
 | 2026-07-16 21:05 | Android CI | ❌ FAIL | chore(deps): bump mcp from 1.28.0 to 1.28.1 in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29534238935) |
@@ -63,4 +64,3 @@
 | 2026-06-23 06:56 | iOS CI | ✅ PASS | Update server.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27987537519) |
 | 2026-06-21 06:11 | Android CI | ✅ PASS | docs: add architectural logs for Zookos Triangle and connectivity decisions | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27895569278) |
 | 2026-06-21 06:09 | Adapters CI | ✅ PASS | docs: add architectural logs for Zookos Triangle and connectivity decisions | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27895569277) |
-| 2026-06-21 06:09 | iOS CI | ✅ PASS | docs: add architectural logs for Zookos Triangle and connectivity decisions | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27895569271) |
