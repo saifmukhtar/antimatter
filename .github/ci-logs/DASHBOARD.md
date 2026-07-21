@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-74%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-165-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-166-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 165 |
+| **Total Runs** | 166 |
 | **Passed** | 123 |
-| **Failed** | 39 |
+| **Failed** | 40 |
 | **Pass Rate** | 74% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-21 10:23 | npm_and_yarn in /docs for astro - Update #1471063809 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29821967000) |
 | 2026-07-21 10:21 | Android CI | ❌ FAIL | chore(deps): bump astro and @astrojs/starlight in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29821614905) |
 | 2026-07-21 10:17 | Adapters CI | ✅ PASS | chore(deps): bump astro and @astrojs/starlight in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29821615085) |
 | 2026-07-21 10:17 | Core CI | ✅ PASS | chore(deps): bump astro and @astrojs/starlight in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29821614908) |
@@ -63,4 +64,3 @@
 | 2026-06-23 06:58 | Adapters CI | ✅ PASS | Merge pull request #11 from martofeld/patch-1 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008236471) |
 | 2026-06-23 06:57 | iOS CI | ✅ PASS | Merge pull request #11 from martofeld/patch-1 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008236511) |
 | 2026-06-23 06:56 | Adapters CI | ✅ PASS | Update server.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27987537437) |
-| 2026-06-23 06:56 | iOS CI | ✅ PASS | Update server.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/27987537519) |
