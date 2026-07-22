@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
-![Pass Rate](https://img.shields.io/badge/Pass%20Rate-73%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-172-blue)
+![Pass Rate](https://img.shields.io/badge/Pass%20Rate-72%25-brightgreen)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-173-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 172 |
+| **Total Runs** | 173 |
 | **Passed** | 126 |
-| **Failed** | 43 |
-| **Pass Rate** | 73% |
+| **Failed** | 44 |
+| **Pass Rate** | 72% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-22 06:46 | Android CI | ❌ FAIL | chore(deps): bump body-parser from 2.2.2 to 2.3.0 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29897552648) |
 | 2026-07-22 06:41 | Adapters CI | ✅ PASS | chore(deps): bump body-parser from 2.2.2 to 2.3.0 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29897552541) |
 | 2026-07-22 06:41 | Core CI | ✅ PASS | chore(deps): bump body-parser from 2.2.2 to 2.3.0 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29897552645) |
 | 2026-07-22 06:41 | npm_and_yarn in /adapters/cc for body-parser - Update #1473743965 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29897497014) |
@@ -63,4 +64,3 @@
 | 2026-06-23 07:06 | Android CI | ✅ PASS | chore: bump antimatter-gateway version to 2.0.5 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008563830) |
 | 2026-06-23 07:04 | Adapters CI | ✅ PASS | chore: bump antimatter-gateway version to 2.0.5 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008564673) |
 | 2026-06-23 07:04 | Core CI | ✅ PASS | chore: bump antimatter-gateway version to 2.0.5 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008564512) |
-| 2026-06-23 07:02 | Android CI | ✅ PASS | Merge pull request #10 from saifmukhtar/dependabot/uv/adapters/ag2/pydantic-settings-2.14.2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008380116) |
