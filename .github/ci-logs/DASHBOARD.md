@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
-![Pass Rate](https://img.shields.io/badge/Pass%20Rate-73%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-176-blue)
+![Pass Rate](https://img.shields.io/badge/Pass%20Rate-72%25-brightgreen)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-177-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 176 |
+| **Total Runs** | 177 |
 | **Passed** | 129 |
-| **Failed** | 44 |
-| **Pass Rate** | 73% |
+| **Failed** | 45 |
+| **Pass Rate** | 72% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-24 03:09 | Android CI | ❌ FAIL | chore(deps): bump hono from 4.12.25 to 4.12.31 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30063249481) |
 | 2026-07-24 03:04 | Adapters CI | ✅ PASS | chore(deps): bump hono from 4.12.25 to 4.12.31 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30063249523) |
 | 2026-07-24 03:04 | iOS CI | ✅ PASS | chore(deps): bump hono from 4.12.25 to 4.12.31 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30063249478) |
 | 2026-07-24 03:04 | npm_and_yarn in /adapters/cc for hono - Update #1477952274 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30063203682) |
@@ -63,4 +64,3 @@
 | 2026-07-01 05:27 | Adapters CI | ✅ PASS | Hotfix | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28495679313) |
 | 2026-07-01 05:27 | Core CI | ✅ PASS | Hotfix | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28495679297) |
 | 2026-06-23 07:14 | Android CI | ✅ PASS | ci: add manual workflow dispatch for publishing to PyPI | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008938656) |
-| 2026-06-23 07:12 | iOS CI | ✅ PASS | ci: add manual workflow dispatch for publishing to PyPI | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28008938631) |
