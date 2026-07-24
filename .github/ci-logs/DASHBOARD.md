@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-72%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-185-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-186-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 185 |
-| **Passed** | 134 |
+| **Total Runs** | 186 |
+| **Passed** | 135 |
 | **Failed** | 48 |
 | **Pass Rate** | 72% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-24 13:11 | iOS CI | ✅ PASS | Bump linkify-it from 5.0.1 to 5.0.2 in /adapters/ag | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30095875355) |
 | 2026-07-24 13:11 | npm_and_yarn in /adapters/ag for linkify-it - Update #1479274904 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30095799698) |
 | 2026-07-24 06:12 | npm_and_yarn in /adapters/cc for hono - Update #1478372573 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30071512465) |
 | 2026-07-24 05:03 | npm_and_yarn in /adapters/cc for hono - Update #1478219793 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30068354826) |
@@ -63,4 +64,3 @@
 | 2026-07-01 05:51 | Adapters CI | ✅ PASS | Delete test_find_large2.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496630527) |
 | 2026-07-01 05:51 | iOS CI | ✅ PASS | Delete test_find_large2.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496630533) |
 | 2026-07-01 05:51 | Adapters CI | ✅ PASS | Delete test_find_large.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496613807) |
-| 2026-07-01 05:50 | iOS CI | ✅ PASS | Delete test_find_large.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496613830) |
