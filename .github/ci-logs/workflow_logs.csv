@@ -186,3 +186,4 @@ Date,Workflow,Status,Commit,URL
 2026-07-24 13:11,npm_and_yarn in /adapters/ag for linkify-it - Update #1479274904,✅ PASS,chore: update workflow dashboard,https://github.com/saifmukhtar/antimatter/actions/runs/30095799698
 2026-07-24 13:11,iOS CI,✅ PASS,Bump linkify-it from 5.0.1 to 5.0.2 in /adapters/ag,https://github.com/saifmukhtar/antimatter/actions/runs/30095875355
 2026-07-24 13:11,Adapters CI,✅ PASS,Bump linkify-it from 5.0.1 to 5.0.2 in /adapters/ag,https://github.com/saifmukhtar/antimatter/actions/runs/30095875385
+2026-07-24 13:17,Android CI,❌ FAIL,Bump linkify-it from 5.0.1 to 5.0.2 in /adapters/ag,https://github.com/saifmukhtar/antimatter/actions/runs/30095875509
