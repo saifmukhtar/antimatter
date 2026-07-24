@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-72%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-188-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-189-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 188 |
-| **Passed** | 136 |
+| **Total Runs** | 189 |
+| **Passed** | 137 |
 | **Failed** | 49 |
 | **Pass Rate** | 72% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-24 16:18 | uv in /adapters/ag2 for pyasn1 - Update #1479652178 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30108473467) |
 | 2026-07-24 13:17 | Android CI | ❌ FAIL | Bump linkify-it from 5.0.1 to 5.0.2 in /adapters/ag | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30095875509) |
 | 2026-07-24 13:11 | Adapters CI | ✅ PASS | Bump linkify-it from 5.0.1 to 5.0.2 in /adapters/ag | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30095875385) |
 | 2026-07-24 13:11 | iOS CI | ✅ PASS | Bump linkify-it from 5.0.1 to 5.0.2 in /adapters/ag | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30095875355) |
@@ -63,4 +64,3 @@
 | 2026-07-01 05:52 | iOS CI | ✅ PASS | Delete test_qr.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496675858) |
 | 2026-07-01 05:52 | Adapters CI | ✅ PASS | Delete test_find_large3.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496659322) |
 | 2026-07-01 05:52 | Core CI | ✅ PASS | Delete test_find_large3.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496659304) |
-| 2026-07-01 05:51 | Adapters CI | ✅ PASS | Delete test_find_large2.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496630527) |
