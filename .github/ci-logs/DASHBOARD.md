@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-72%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-193-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-194-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 193 |
-| **Passed** | 140 |
+| **Total Runs** | 194 |
+| **Passed** | 141 |
 | **Failed** | 50 |
 | **Pass Rate** | 72% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-25 14:26 | npm_and_yarn in /adapters/ag for fast-uri - Update #1481510532 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30161601252) |
 | 2026-07-24 16:29 | uv in /adapters/ag2 for pyasn1 - Update #1479673861 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30109217456) |
 | 2026-07-24 16:27 | Android CI | ✅ PASS | Bump pyasn1 from 0.6.3 to 0.6.4 in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30108565760) |
 | 2026-07-24 16:19 | Adapters CI | ✅ PASS | Bump pyasn1 from 0.6.3 to 0.6.4 in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30108567227) |
@@ -63,4 +64,3 @@
 | 2026-07-01 05:55 | Android CI | ❌ FAIL | Delete test_find_large.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496613799) |
 | 2026-07-01 05:54 | Adapters CI | ✅ PASS | Delete test_ws.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496766565) |
 | 2026-07-01 05:54 | Adapters CI | ✅ PASS | Delete test_uri.kt | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496755904) |
-| 2026-07-01 05:54 | Adapters CI | ✅ PASS | Delete test_tree.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496745443) |
