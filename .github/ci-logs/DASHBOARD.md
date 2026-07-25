@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-73%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-198-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-199-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 198 |
-| **Passed** | 145 |
+| **Total Runs** | 199 |
+| **Passed** | 146 |
 | **Failed** | 50 |
 | **Pass Rate** | 73% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-25 15:28 | Core CI | ✅ PASS | Bump sharp @astrojs/starlight and astro in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30163669205) |
 | 2026-07-25 15:28 | npm_and_yarn in /docs for sharp - Update #1481586322 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30163622513) |
 | 2026-07-25 14:35 | Android CI | ✅ PASS | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/ag | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30161632632) |
 | 2026-07-25 14:26 | Adapters CI | ✅ PASS | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/ag | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30161632642) |
@@ -63,4 +64,3 @@
 | 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_ws.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496766514) |
 | 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_tree.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496745442) |
 | 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_uri.kt | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496755947) |
-| 2026-07-01 05:56 | Android CI | ❌ FAIL | Delete test_daemon.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496600211) |
