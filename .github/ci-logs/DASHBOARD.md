@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
-![Pass Rate](https://img.shields.io/badge/Pass%20Rate-73%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-201-blue)
+![Pass Rate](https://img.shields.io/badge/Pass%20Rate-72%25-brightgreen)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-202-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 201 |
+| **Total Runs** | 202 |
 | **Passed** | 147 |
-| **Failed** | 51 |
-| **Pass Rate** | 73% |
+| **Failed** | 52 |
+| **Pass Rate** | 72% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-25 16:41 | npm_and_yarn in /docs for sharp - Update #1481672130 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30166081856) |
 | 2026-07-25 15:33 | Android CI | ❌ FAIL | Bump sharp @astrojs/starlight and astro in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30163669226) |
 | 2026-07-25 15:28 | Adapters CI | ✅ PASS | Bump sharp @astrojs/starlight and astro in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30163669215) |
 | 2026-07-25 15:28 | Core CI | ✅ PASS | Bump sharp @astrojs/starlight and astro in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30163669205) |
@@ -63,4 +64,3 @@
 | 2026-07-02 08:56 | Graph Update: pip in /core/gateway #1445075585 | ✅ PASS | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577919133) |
 | 2026-07-02 08:56 | Adapters CI | ✅ PASS | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577916562) |
 | 2026-07-02 08:56 | Core CI | ✅ PASS | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577916553) |
-| 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_ws.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496766514) |
