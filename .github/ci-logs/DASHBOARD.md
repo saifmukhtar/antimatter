@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
-![Pass Rate](https://img.shields.io/badge/Pass%20Rate-72%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-206-blue)
+![Pass Rate](https://img.shields.io/badge/Pass%20Rate-71%25-brightgreen)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-207-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 206 |
+| **Total Runs** | 207 |
 | **Passed** | 149 |
-| **Failed** | 54 |
-| **Pass Rate** | 72% |
+| **Failed** | 55 |
+| **Pass Rate** | 71% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-29 08:57 | npm_and_yarn in /adapters/ag for brace-expansion - Update #1492888293 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30437518222) |
 | 2026-07-28 11:51 | npm_and_yarn in /docs for js-yaml - Update #1490430421 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30356368027) |
 | 2026-07-25 23:32 | Android CI | ❌ FAIL | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30179411175) |
 | 2026-07-25 23:26 | iOS CI | ✅ PASS | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30179411170) |
@@ -63,4 +64,3 @@
 | 2026-07-16 21:05 | Android CI | ❌ FAIL | chore(deps): bump mcp from 1.28.0 to 1.28.1 in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29534238935) |
 | 2026-07-16 20:59 | Adapters CI | ✅ PASS | chore(deps): bump mcp from 1.28.0 to 1.28.1 in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29534235753) |
 | 2026-07-16 20:58 | Core CI | ✅ PASS | chore(deps): bump mcp from 1.28.0 to 1.28.1 in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29534234670) |
-| 2026-07-16 20:58 | uv in /adapters/ag2 for mcp - Update #1464083639 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29534174062) |
