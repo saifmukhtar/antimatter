@@ -98,3 +98,11 @@ Because of this robust E2EE architecture, Antimatter is secure over any transpor
 > [!WARNING]
 > **Dynamic Connection Modes**
 > You are prompted to choose your connection mode (LAN or Cloudflare) every time you start the gateway. This preference is never saved, giving you the flexibility to switch seamlessly based on your current network environment without modifying configuration files.
+
+> [!TIP]
+> **Troubleshooting LAN Connections (Firewalls)**
+> If you selected LAN mode but the Android app fails to connect, your host machine's firewall is likely dropping the incoming packets on port `8765`. To fix this, you must explicitly allow port 8765/tcp through your local firewall:
+> - **Ubuntu / Debian (UFW):** `sudo ufw allow 8765/tcp`
+> - **Fedora / RHEL (Firewalld):** `sudo firewall-cmd --add-port=8765/tcp --permanent && sudo firewall-cmd --reload`
+> 
+> *Alternatively, use Cloudflare Mode which bypasses local firewalls by creating an outbound tunnel.*
