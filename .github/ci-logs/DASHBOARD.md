@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-73%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-218-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-219-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 218 |
+| **Total Runs** | 219 |
 | **Passed** | 160 |
-| **Failed** | 55 |
+| **Failed** | 56 |
 | **Pass Rate** | 73% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-31 09:36 | npm_and_yarn in /docs for js-yaml - Update #1496798466 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620444614) |
 | 2026-07-31 09:35 | npm_and_yarn in /adapters/cc for hono - Update #1496798472 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620445265) |
 | 2026-07-31 09:35 | Adapters CI | ✅ PASS | Bump postcss from 8.5.15 to 8.5.25 in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620437087) |
 | 2026-07-31 09:34 | Core CI | ✅ PASS | Bump postcss from 8.5.15 to 8.5.25 in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620437064) |
@@ -63,4 +64,3 @@
 | 2026-07-22 06:41 | Adapters CI | ✅ PASS | chore(deps): bump body-parser from 2.2.2 to 2.3.0 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29897552541) |
 | 2026-07-22 06:41 | Core CI | ✅ PASS | chore(deps): bump body-parser from 2.2.2 to 2.3.0 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29897552645) |
 | 2026-07-22 06:41 | npm_and_yarn in /adapters/cc for body-parser - Update #1473743965 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29897497014) |
-| 2026-07-21 20:49 | npm_and_yarn in /docs for astro - Update #1472547213 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29867323345) |
