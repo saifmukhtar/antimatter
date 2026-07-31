@@ -117,8 +117,8 @@ fun TerminalScreen(
                     terminalView.isFocusable            = true
                     terminalView.isFocusableInTouchMode = true
 
-                    // 20sp — Increased for better readability on mobile
-                    var currentSizeSp = 20f
+                    // 40sp — Maximum default zoom as requested by user
+                    var currentSizeSp = 40f
                     terminalView.setTextSize(currentSizeSp.toInt())
 
                     terminalView.attachSession(viewModel.terminalSession)

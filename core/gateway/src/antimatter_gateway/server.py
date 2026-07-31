@@ -255,7 +255,7 @@ class GatewayServer:
 
         bind_addresses: list[str] = ["127.0.0.1"]
         if mode in ("lan", "both") and local_ip:
-            bind_addresses.append(local_ip)
+            bind_addresses = ["0.0.0.0"]
 
         log_parts = []
         if mode in ("cloudflare", "both") and self.config.cloudflare_url:
