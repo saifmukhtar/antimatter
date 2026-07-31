@@ -27,10 +27,7 @@ The Antimatter Android app is a native companion application built with **Kotlin
 ├── :core:ui               # Material 3 theme, Markdown renderer, shared composables
 ├── :feature:connect       # QR scanner, pairing flow, connection state
 ├── :feature:chat          # Trajectory/chat UI, prompting, artifact viewer
-├── :feature:files         # Workspace file browser, file viewer
-├── :feature:terminal      # Native PTY terminal (Termux-based)
-├── :terminal-emulator     # JNI NDK terminal emulator (Termux fork)
-└── :terminal-view         # TerminalView composable bridge
+└── :feature:files         # Workspace file browser, file viewer
 ```
 
 ---
@@ -115,26 +112,7 @@ The primary interaction screen.
 
 Sends `GET_FILES` and `READ_FILE` WebSocket messages to the Gateway, which forwards them to the active adapter.
 
-### `:feature:terminal` — Native PTY Terminal
 
-The most advanced feature — a full interactive terminal shell connected to the host machine via the encrypted WebSocket tunnel.
-
-| Component | Purpose |
-|---|---|
-| `TerminalScreen` | Full-screen Compose UI embedding `TerminalView` |
-| `TerminalViewModel` | Manages PTY session lifecycle — `PtyStart`, `PtyInput`, `PtyResize`, `PtyOutput` |
-| `TerminalView` | Native Android `View` from the `terminal-view` module (Termux-based) |
-| `:terminal-emulator` | JNI NDK library — actual VT100/xterm terminal emulation in native code |
-
-**How it works:**
-1. `TerminalViewModel` sends `PTY_START` to the Gateway.
-2. Gateway spawns a PTY process on the host (`/bin/bash`).
-3. All keystrokes from `TerminalView` → `PTY_INPUT` → Gateway → PTY stdin.
-4. PTY stdout → Gateway → `PTY_OUTPUT` → `TerminalView` renders output.
-5. Pinch-to-zoom adjusts font size via `TerminalViewClient.onScale()`.
-6. Extra keys bar provides Termux-style utility keys (ESC, TAB, CTRL, ALT, arrows, `/`, `-`).
-
----
 
 ## Security: Biometric Authentication
 
@@ -210,7 +188,6 @@ You may notice the app uses `androidx.biometric:biometric:1.2.0-alpha05`. While 
 | DI | Hilt | 2.51+ |
 | Networking | OkHttp | 4.x |
 | Persistence | Room (SQLCipher encrypted) + DataStore | Latest |
-| Terminal | Termux terminal-emulator (NDK) | Fork |
 | Camera/QR | CameraX + ZXing Core | Latest |
 | Biometrics | AndroidX Biometric | Latest |
 | Build | Gradle (Kotlin DSL) | 8.x |

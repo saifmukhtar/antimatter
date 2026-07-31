@@ -45,19 +45,3 @@ class AgentInfo(BaseModel):
 # We can define InboundMessage/OutboundMessage unions if needed, 
 # but usually we just parse dictionaries dynamically based on the 'type' field.
 
-class PtyStartPayload(BaseModel):
-    cols: int
-    rows: int
-
-class PtyInputPayload(BaseModel):
-    data: str # base64 encoded
-
-class PtyOutputPayload(BaseModel):
-    data: str # base64 encoded
-
-class PtyResizePayload(BaseModel):
-    cols: int
-    rows: int
-
-class PtyPingPayload(BaseModel):
-    pass

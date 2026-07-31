@@ -42,9 +42,14 @@ Then start the Gateway:
 antimatter-gateway start
 ```
 
-The Gateway will:
-- Start a local IPC server at `ws://127.0.0.1:8765`
-- Spawn a Cloudflare tunnel to expose a public `wss://` endpoint
+When you run this command, you will be prompted to choose a connection mode:
+1. **Local Network (LAN) only** — Best for local testing over WiFi.
+2. **Cloudflare Tunnel only** — Requires running `antimatter-gateway setup` first.
+3. **Both** — Available everywhere.
+
+The Gateway will then:
+- Start a local IPC server at `ws://127.0.0.1:8765` (or `0.0.0.0` if LAN mode is enabled)
+- (If selected) Spawn a Cloudflare tunnel to expose a public `wss://` endpoint
 - Generate and persist an Ed25519 keypair and 256-bit pairing token to your OS keychain
 
 :::tip[Runs in the Background]
@@ -135,6 +140,17 @@ Then in the **Antimatter app**:
 3. The app performs an Ed25519 handshake with the Gateway.
 4. ✅ You're paired and ready to go!
 
+### Connecting without Cloudflare (Local Network)
+
+If your devices are on the same local network, you can bypass Cloudflare and connect directly over WebSockets. The Gateway listens on `0.0.0.0`, meaning it accepts connections from any device on your local network. 
+
+**Security Note:** Although the raw transport (`ws://`) is unencrypted, Antimatter applies Application-Layer End-to-End Encryption (Ed25519 authentication + X25519 ECDH) to every payload, so it remains completely secure over your local WiFi.
+
+When entering the manual connection URL, use the format `ws://<IP_ADDRESS>:8765`, where `<IP_ADDRESS>` depends on your device:
+
+- **Android Emulator:** Use `ws://10.0.2.2:8765` (this special IP automatically routes to your computer's localhost).
+- **Physical Android (Same WiFi/Router):** Use your computer's local IP address (e.g., `ws://192.168.1.X:8765`). Find it using `ipconfig` (Windows) or `ip a` / `ifconfig` (Mac/Linux).
+
 ---
 
 ## Features Overview
@@ -145,13 +161,6 @@ Then in the **Antimatter app**:
 - **Rich Markdown rendering** — AI responses render with full syntax highlighting, tables, and code blocks.
 - **Remote prompting** — type a message or attach an image and it's injected directly into the active agent.
 - **Thinking indicator** — animated typing bubble when the agent is generating.
-
-### Native PTY Terminal
-
-- **Full interactive shell** — run any command: `vim`, `htop`, `ssh`, `git`, etc.
-- **ANSI color rendering** — full 256-color and true-color terminal output.
-- **Termux-style UX** — extra keys bar, pinch-to-zoom, long-press to copy.
-- **E2EE tunnel** — all terminal I/O is end-to-end encrypted through the Cloudflare tunnel.
 
 ### Workspace Explorer
 

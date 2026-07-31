@@ -7,7 +7,6 @@ dependencies = [
     "websockets==15.0.1",
     "qrcode==8.2",
     "aiofiles==25.1.0",
-    "ptyprocess==0.7.0",
     "pydantic>=2.0.0",
     "keyring>=24.0.0",
     "cryptography>=41.0.0",
