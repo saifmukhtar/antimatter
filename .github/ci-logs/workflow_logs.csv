@@ -225,3 +225,4 @@ Date,Workflow,Status,Commit,URL
 2026-07-31 09:40,Android CI,❌ FAIL,Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/ag (#21),https://github.com/saifmukhtar/antimatter/actions/runs/30620377577
 2026-07-31 09:41,Android CI,✅ PASS,Merge branch 'main' into dependabot/npm_and_yarn/adapters/cc/hono-4.12.31,https://github.com/saifmukhtar/antimatter/actions/runs/30620324595
 2026-07-31 09:42,Android CI,✅ PASS,Merge branch 'main' into dependabot/npm_and_yarn/adapters/cc/fast-uri-3.1.4,https://github.com/saifmukhtar/antimatter/actions/runs/30620349978
+2026-07-31 09:43,iOS CI,✅ PASS,fix(android): resolve NewApi lint error for removeLast() on API 33,https://github.com/saifmukhtar/antimatter/actions/runs/30620963718
