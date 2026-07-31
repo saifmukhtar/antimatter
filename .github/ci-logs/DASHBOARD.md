@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-72%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-211-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-212-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 211 |
-| **Passed** | 153 |
+| **Total Runs** | 212 |
+| **Passed** | 154 |
 | **Failed** | 55 |
 | **Pass Rate** | 72% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-31 09:33 | Adapters CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/adapters/cc/fast-uri-3.1.4 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620349997) |
 | 2026-07-31 09:33 | Adapters CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/docs/multi-151545284e | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620346870) |
 | 2026-07-31 09:33 | iOS CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/adapters/ag/linkify-it-5.0.2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620338940) |
 | 2026-07-31 09:33 | iOS CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/adapters/cc/body-parser-2.3.0 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620320514) |
@@ -63,4 +64,3 @@
 | 2026-07-21 10:21 | Android CI | ❌ FAIL | chore(deps): bump astro and @astrojs/starlight in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29821614905) |
 | 2026-07-21 10:17 | Adapters CI | ✅ PASS | chore(deps): bump astro and @astrojs/starlight in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29821615085) |
 | 2026-07-21 10:17 | Core CI | ✅ PASS | chore(deps): bump astro and @astrojs/starlight in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29821614908) |
-| 2026-07-21 10:16 | npm_and_yarn in /docs for astro - Update #1471047195 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29821511562) |

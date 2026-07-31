@@ -210,3 +210,4 @@ Date,Workflow,Status,Commit,URL
 2026-07-31 09:33,iOS CI,✅ PASS,Merge branch 'main' into dependabot/npm_and_yarn/adapters/cc/body-parser-2.3.0,https://github.com/saifmukhtar/antimatter/actions/runs/30620320514
 2026-07-31 09:33,iOS CI,✅ PASS,Merge branch 'main' into dependabot/npm_and_yarn/adapters/ag/linkify-it-5.0.2,https://github.com/saifmukhtar/antimatter/actions/runs/30620338940
 2026-07-31 09:33,Adapters CI,✅ PASS,Merge branch 'main' into dependabot/npm_and_yarn/docs/multi-151545284e,https://github.com/saifmukhtar/antimatter/actions/runs/30620346870
+2026-07-31 09:33,Adapters CI,✅ PASS,Merge branch 'main' into dependabot/npm_and_yarn/adapters/cc/fast-uri-3.1.4,https://github.com/saifmukhtar/antimatter/actions/runs/30620349997
