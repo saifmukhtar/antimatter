@@ -33,7 +33,7 @@ Mobile App                              Antimatter Gateway
     │  ◄────── AVAILABLE_AGENTS { agents[] } ──│
     │                                          │
     │  ←──── Bidirectional message exchange ───►│
-    │  SEND_MESSAGE / GET_FILES / PTY_* ...     │
+    │  SEND_MESSAGE / GET_FILES / WRITE_FILE... │
 ```
 
 ### 1. Transport & Origin Validation
@@ -163,35 +163,6 @@ Subscribe to real-time trajectory updates for a specific conversation.
 }
 ```
 
-### PTY Messages
-
-Control a remote terminal session.
-
-```json title="Start a PTY session"
-{
-  "type": "PTY_START",
-  "id": "session-uuid",
-  "cols": 80,
-  "rows": 24
-}
-```
-
-```json title="Send keystrokes"
-{
-  "type": "PTY_INPUT",
-  "id": "session-uuid",
-  "data": "ls -la\n"
-}
-```
-
-```json title="Resize terminal"
-{
-  "type": "PTY_RESIZE",
-  "id": "session-uuid",
-  "cols": 120,
-  "rows": 40
-}
-```
 
 ### `PING`
 
@@ -282,17 +253,6 @@ Response to `READ_FILE`.
 }
 ```
 
-### `PTY_OUTPUT`
-
-Terminal output from the remote PTY session.
-
-```json
-{
-  "type": "PTY_OUTPUT",
-  "id": "session-uuid",
-  "data": "base64-encoded-bytes"
-}
-```
 
 ### `PONG`
 
