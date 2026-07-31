@@ -4,7 +4,6 @@ import logging
 import pathlib
 import aiofiles
 from antimatter_crypto.e2ee import E2EESession
-from antimatter_gateway.pty_manager import PtyManager
 
 logger = logging.getLogger(__name__)
 
@@ -15,7 +14,6 @@ class MessageRouter:
         # per-session ephemeral key (forward secrecy, AM-023/AM-043).
         self.clients: dict = {}
         self.adapters = {}  # id -> {"name": str, "ws": websocket, "workspace_root": str}
-        self.pty_manager = PtyManager(self)
 
         # Workspace is completely independent of agents.
         # Initialise from the first allowed_workspace in config, fall back to CWD.
@@ -143,28 +141,6 @@ class MessageRouter:
         require an agent to be connected.
         """
         cmd_type = parsed_cmd.get("type")
-
-        # ── PTY commands ────────────────────────────────────────────────
-        if cmd_type == "PTY_START":
-            session_id = id(websocket)
-            await self.pty_manager.start_pty(session_id,
-                                             parsed_cmd.get("cols", 80),
-                                             parsed_cmd.get("rows", 24))
-            return
-
-        if cmd_type == "PTY_INPUT":
-            self.pty_manager.write_input(id(websocket), parsed_cmd.get("data", ""))
-            return
-
-        if cmd_type == "PTY_RESIZE":
-            self.pty_manager.resize(id(websocket),
-                                    parsed_cmd.get("cols", 80),
-                                    parsed_cmd.get("rows", 24))
-            return
-
-        if cmd_type == "PTY_PING":
-            self.pty_manager.ping(id(websocket))
-            return
 
         # ── Workspace selection ─────────────────────────────────────────
         if cmd_type == "CHANGE_WORKSPACE":

@@ -4,12 +4,12 @@ requires-python = ">=3.10"
 
 [manifest]
 members = [
-    "antimatter-core",
     "antimatter-gateway",
     "antimatter-shared-config",
     "antimatter-shared-crypto",
     "antimatter-shared-fs",
     "antimatter-shared-protocol",
+    "antimatter-workspace",
 ]
 
 [[package]]
@@ -31,19 +31,8 @@ wheels = [
 ]
 
 [[package]]
-name = "antimatter-core"
-version = "2.0.0"
-source = { editable = "." }
-dependencies = [
-    { name = "antimatter-gateway" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "antimatter-gateway", editable = "gateway" }]
-
-[[package]]
 name = "antimatter-gateway"
-version = "2.0.4"
+version = "2.0.8"
 source = { editable = "gateway" }
 dependencies = [
     { name = "aiofiles" },
@@ -54,7 +43,6 @@ dependencies = [
     { name = "base58" },
     { name = "cryptography" },
     { name = "keyring" },
-    { name = "ptyprocess" },
     { name = "pydantic" },
     { name = "qrcode" },
     { name = "websockets" },
@@ -70,7 +58,6 @@ requires-dist = [
     { name = "base58", specifier = ">=2.1.1" },
     { name = "cryptography", specifier = ">=41.0.0" },
     { name = "keyring", specifier = ">=24.0.0" },
-    { name = "ptyprocess", specifier = "==0.7.0" },
     { name = "pydantic", specifier = ">=2.0.0" },
     { name = "qrcode", specifier = "==8.2" },
     { name = "websockets", specifier = "==15.0.1" },
@@ -78,7 +65,7 @@ requires-dist = [
 
 [[package]]
 name = "antimatter-shared-config"
-version = "2.0.0"
+version = "2.0.1"
 source = { editable = "shared-config" }
 dependencies = [
     { name = "cryptography" },
@@ -95,7 +82,7 @@ requires-dist = [
 
 [[package]]
 name = "antimatter-shared-crypto"
-version = "2.0.0"
+version = "2.0.1"
 source = { editable = "shared-crypto" }
 dependencies = [
     { name = "base58" },
@@ -112,18 +99,22 @@ requires-dist = [
 
 [[package]]
 name = "antimatter-shared-fs"
-version = "2.0.1"
+version = "2.0.2"
 source = { editable = "shared-fs" }
 dependencies = [
+    { name = "antimatter-shared-config" },
     { name = "antimatter-shared-protocol" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "antimatter-shared-protocol", editable = "shared-protocol" }]
+requires-dist = [
+    { name = "antimatter-shared-config", editable = "shared-config" },
+    { name = "antimatter-shared-protocol", editable = "shared-protocol" },
+]
 
 [[package]]
 name = "antimatter-shared-protocol"
-version = "2.0.0"
+version = "2.0.1"
 source = { editable = "shared-protocol" }
 dependencies = [
     { name = "pydantic" },
@@ -131,6 +122,17 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [{ name = "pydantic", specifier = ">=2.0.0" }]
+
+[[package]]
+name = "antimatter-workspace"
+version = "2.0.1"
+source = { editable = "." }
+dependencies = [
+    { name = "antimatter-gateway" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "antimatter-gateway", editable = "gateway" }]
 
 [[package]]
 name = "backports-tarfile"
@@ -380,15 +382,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/de/1d/f4da6f02cdffe04d6362210b807146a26044c88d839208aec273bb0d9184/more_itertools-11.1.0.tar.gz", hash = "sha256:48e8f4d9e7e5878571ecf6f2b4e57634f93cd474cc8cfbd2376f2d11b396e30d", size = 145772, upload-time = "2026-05-22T14:14:29.909Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e8/3d/1087453384dbde46a8c7f9356eead2c58be8a7bf156bca40243377c85715/more_itertools-11.1.0-py3-none-any.whl", hash = "sha256:4b65538ae22f6fed0ce4874efd317463a7489796a0939fa66824dd542125a192", size = 72226, upload-time = "2026-05-22T14:14:28.824Z" },
-]
-
-[[package]]
-name = "ptyprocess"
-version = "0.7.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/20/e5/16ff212c1e452235a90aeb09066144d0c5a6a8c0834397e03f5224495c4e/ptyprocess-0.7.0.tar.gz", hash = "sha256:5c5d0a3b48ceee0b48485e0c26037c0acd7d29765ca3fbb5cb3831d347423220", size = 70762, upload-time = "2020-12-28T15:15:30.155Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/22/a6/858897256d0deac81a172289110f31629fc4cee19b6f01283303e18c8db3/ptyprocess-0.7.0-py2.py3-none-any.whl", hash = "sha256:4b41f3967fce3af57cc7e94b888626c18bf37a083e3651ca8feeb66d492fef35", size = 13993, upload-time = "2020-12-28T15:15:28.35Z" },
 ]
 
 [[package]]

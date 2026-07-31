@@ -23,10 +23,8 @@ import dev.saifmukhtar.antimatter.feature.connect.QRScannerScreen
 import dev.saifmukhtar.antimatter.feature.files.FileViewScreen
 import dev.saifmukhtar.antimatter.feature.files.FilesScreen
 import dev.saifmukhtar.antimatter.feature.files.FilesViewModel
-import dev.saifmukhtar.antimatter.feature.terminal.TerminalScreen
 import dev.saifmukhtar.antimatter.core.ui.utils.LocalCrashHandler
 import dev.saifmukhtar.antimatter.MainActivity
-import androidx.compose.material.icons.filled.Terminal
 
 @Composable
 fun AntimatterNavigation(
@@ -232,12 +230,6 @@ fun AntimatterNavigation(
                             onClick = { currentTab = 1 },
                             alwaysShowLabel = false
                         )
-                        NavigationBarItem(
-                            icon = { Icon(Icons.Default.Terminal, contentDescription = "Terminal") },
-                            selected = currentTab == 2,
-                            onClick = { currentTab = 2 },
-                            alwaysShowLabel = false
-                        )
                     }
                 }
             ) { paddingValues ->
@@ -279,8 +271,6 @@ fun AntimatterNavigation(
                                 }
                             }
                         )
-                    } else if (currentTab == 2) {
-                        TerminalScreen()
                     }
                 }
             }
