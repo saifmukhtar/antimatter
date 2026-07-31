@@ -1,8 +1,8 @@
 [project]
-version = "2.0.7"
+version = "2.0.8"
 readme = "README.md"
 name = "antimatter-gateway"
-description = "Local edge gateway for the Antimatter ecosystem"
+description = "Antimatter E2EE Gateway Server"
 dependencies = [
     "websockets==15.0.1",
     "qrcode==8.2",
