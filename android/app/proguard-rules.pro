@@ -42,6 +42,10 @@
 -keep @androidx.room.Dao class * { *; }
 -keepclassmembers @androidx.room.Entity class * { *; }
 
+# WorkManager
+-keep class androidx.work.** { *; }
+-dontwarn androidx.work.**
+
 # Cryptography / Ed25519
 -keep class java.security.** { *; }
 -keep class javax.crypto.** { *; }

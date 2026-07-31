@@ -23,8 +23,8 @@ android {
         applicationId = "dev.saifmukhtar.antimatter"
         minSdk = 33           // Android 13 required for native Ed25519 Support
         targetSdk = 35
-        versionCode = 4
-        versionName = "2.0.2"
+        versionCode = 5
+        versionName = "2.0.3"
     }
 
     signingConfigs {
