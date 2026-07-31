@@ -80,6 +80,15 @@ Install the adapter for the AI you are using. For example, for the Antigravity I
 > **Connection Mode Selection**
 > Antimatter does not save your connection preference. You can dynamically choose between Local Network (LAN) and Cloudflare Tunnel on every `start` and `pair` command, without modifying any configuration files. When connecting over LAN, the app relies on robust Application-Layer E2EE rather than TLS, maintaining full security without requiring manual certificate installation.
 
+> [!TIP]
+> **Troubleshooting LAN Connections (Firewalls)**
+> If you selected LAN mode but the Android app fails to connect, your host machine's firewall is likely dropping the incoming packets on port `8765`. To fix this, you must explicitly allow port 8765/tcp through your local firewall:
+> - **Ubuntu / Debian (UFW):** `sudo ufw allow 8765/tcp`
+> - **Fedora / RHEL (Firewalld):** `sudo firewall-cmd --add-port=8765/tcp --permanent && sudo firewall-cmd --reload`
+> 
+> *Alternatively, use Cloudflare Mode which bypasses local firewalls by creating an outbound tunnel.*
+
+
 ---
 
 ## 📖 Official Documentation

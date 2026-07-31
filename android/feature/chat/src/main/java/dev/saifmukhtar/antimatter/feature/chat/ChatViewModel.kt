@@ -343,7 +343,7 @@ class ChatViewModel @Inject constructor(
                 _uiState.update { state -> 
                     val newSteps = state.steps.toMutableList()
                     if (state.isGenerating && newSteps.isNotEmpty() && newSteps.last().case == "userInput") {
-                        newSteps.removeLast()
+                        newSteps.removeAt(newSteps.size - 1)
                     }
                     state.copy(error = message.message, steps = newSteps, isGenerating = false)
                 }
@@ -443,7 +443,7 @@ class ChatViewModel @Inject constructor(
                     _uiState.update { state -> 
                         val newSteps = state.steps.toMutableList()
                         if (newSteps.isNotEmpty() && newSteps.last().case == "userInput") {
-                            newSteps.removeLast()
+                            newSteps.removeAt(newSteps.size - 1)
                         }
                         state.copy(error = "Failed to process image", steps = newSteps, isGenerating = false)
                     }
