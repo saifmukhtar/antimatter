@@ -1,19 +1,30 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
-![Pass Rate](https://img.shields.io/badge/Pass%20Rate-73%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-197-blue)
+![Pass Rate](https://img.shields.io/badge/Pass%20Rate-72%25-brightgreen)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-208-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 197 |
-| **Passed** | 144 |
-| **Failed** | 50 |
-| **Pass Rate** | 73% |
+| **Total Runs** | 208 |
+| **Passed** | 150 |
+| **Failed** | 55 |
+| **Pass Rate** | 72% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-31 09:32 | iOS CI | ✅ PASS | Merge branch 'main' into dependabot/uv/adapters/ag2/mcp-1.28.1 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620303867) |
+| 2026-07-29 08:57 | npm_and_yarn in /adapters/ag for brace-expansion - Update #1492888293 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30437518222) |
+| 2026-07-28 11:51 | npm_and_yarn in /docs for js-yaml - Update #1490430421 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30356368027) |
+| 2026-07-25 23:32 | Android CI | ❌ FAIL | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30179411175) |
+| 2026-07-25 23:26 | iOS CI | ✅ PASS | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30179411170) |
+| 2026-07-25 23:26 | npm_and_yarn in /adapters/cc for fast-uri - Update #1482293868 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30179383556) |
+| 2026-07-25 16:41 | npm_and_yarn in /docs for sharp - Update #1481672130 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30166081856) |
+| 2026-07-25 15:33 | Android CI | ❌ FAIL | Bump sharp @astrojs/starlight and astro in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30163669226) |
+| 2026-07-25 15:28 | Adapters CI | ✅ PASS | Bump sharp @astrojs/starlight and astro in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30163669215) |
+| 2026-07-25 15:28 | Core CI | ✅ PASS | Bump sharp @astrojs/starlight and astro in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30163669205) |
+| 2026-07-25 15:28 | npm_and_yarn in /docs for sharp - Update #1481586322 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30163622513) |
 | 2026-07-25 14:35 | Android CI | ✅ PASS | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/ag | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30161632632) |
 | 2026-07-25 14:26 | Adapters CI | ✅ PASS | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/ag | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30161632642) |
 | 2026-07-25 14:26 | iOS CI | ✅ PASS | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/ag | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30161632646) |
@@ -53,14 +64,3 @@
 | 2026-07-18 00:47 | Graph Update: uv in /adapters/ag2 |  /core #1465876407 | ✅ PASS | [View Log](chore: update workflow dashboard,https://github.com/saifmukhtar/antimatter/actions/runs/29623834988) |
 | 2026-07-16 21:05 | Android CI | ❌ FAIL | chore(deps): bump mcp from 1.28.0 to 1.28.1 in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29534238935) |
 | 2026-07-16 20:59 | Adapters CI | ✅ PASS | chore(deps): bump mcp from 1.28.0 to 1.28.1 in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29534235753) |
-| 2026-07-16 20:58 | Core CI | ✅ PASS | chore(deps): bump mcp from 1.28.0 to 1.28.1 in /adapters/ag2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29534234670) |
-| 2026-07-16 20:58 | uv in /adapters/ag2 for mcp - Update #1464083639 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/29534174062) |
-| 2026-07-02 09:01 | Android CI | ❌ FAIL | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577916650) |
-| 2026-07-02 08:56 | Graph Update: pip in /core/gateway #1445075585 | ✅ PASS | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577919133) |
-| 2026-07-02 08:56 | Adapters CI | ✅ PASS | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577916562) |
-| 2026-07-02 08:56 | Core CI | ✅ PASS | Added LAN support and proper selection b/w LAN and Cloudflare | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28577916553) |
-| 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_ws.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496766514) |
-| 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_tree.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496745442) |
-| 2026-07-01 06:00 | Android CI | ❌ FAIL | Delete test_uri.kt | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496755947) |
-| 2026-07-01 05:56 | Android CI | ❌ FAIL | Delete test_daemon.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496600211) |
-| 2026-07-01 05:56 | Android CI | ❌ FAIL | Delete test_find_large2.py | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/28496630623) |
