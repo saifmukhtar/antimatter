@@ -1,13 +1,13 @@
 ---
 title: iOS App
-description: Complete reference for the Antimatter iOS app — SwiftUI, SwiftTerm, CryptoKit, Face ID, and native PTY terminal.
+description: Complete reference for the Antimatter iOS app — SwiftUI, CryptoKit, Face ID, and more.
 sidebar:
   order: 4
 ---
 
 import AuthorCard from '../../components/AuthorCard.astro';
 
-The Antimatter iOS app is a native companion application built with **SwiftUI** and **Swift 6**, providing the same full-featured experience as the Android app — live agent monitoring, remote prompting, workspace browsing, and a native PTY terminal — all secured by Ed25519 cryptography and end-to-end encryption.
+The Antimatter iOS app is a native companion application built with **SwiftUI** and **Swift 6**, providing the same full-featured experience as the Android app — live agent monitoring, remote prompting, and workspace browsing — all secured by Ed25519 cryptography and end-to-end encryption.
 
 :::note[iOS Development Status]
 The iOS app is in active development and is feature-matched to the Android version. All features documented here are either shipped or in active implementation. Build from source using Xcode 16+.
@@ -31,14 +31,14 @@ AppCoordinator.swift         # Root navigation coordinator
 ├── ConnectCoordinator       # Pairing and connection flow
 ├── ChatCoordinator          # AI chat and trajectory view
 ├── FilesCoordinator         # Workspace file browser
-└── TerminalCoordinator      # Native PTY terminal
+
 ```
 
 ### Package Dependencies (SPM)
 
 | Package | Purpose |
 |---|---|
-| `SwiftTerm` | Native xterm/VT100 terminal emulator for the PTY terminal feature |
+
 | `CryptoKit` (system) | Ed25519 signature verification, AES-GCM E2EE decryption |
 | `Network` (system) | URLSession WebSocket client |
 | `CoreData` / `SwiftData` | Local conversation and artifact persistence |
@@ -55,39 +55,7 @@ AppCoordinator.swift         # Root navigation coordinator
 - **Remote prompting** — compose and send text prompts (or image attachments) to the active adapter from anywhere.
 - **Thinking indicator** — animated typing indicator while the agent generates.
 
-### Native PTY Terminal
 
-The terminal feature uses **SwiftTerm** to provide a complete interactive shell experience:
-
-- Full **VT100/xterm** terminal emulation with ANSI color rendering.
-- **256-color** and **true-color** support.
-- **Pinch-to-zoom** font size control.
-- **Long-press** to copy terminal output.
-- Keyboard extras: ESC, TAB, CTRL, arrow keys.
-- All terminal I/O is **E2EE encrypted** through the Cloudflare tunnel.
-
-```swift title="TerminalViewController.swift (simplified)"
-import SwiftTerm
-
-class TerminalViewController: UIViewController {
-    let terminalView = TerminalView(frame: .zero)
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        terminalView.delegate = self
-        // Connect to Gateway PTY session
-        viewModel.startPtySession { output in
-            self.terminalView.feed(byteArray: output)
-        }
-    }
-}
-
-extension TerminalViewController: TerminalViewDelegate {
-    func send(source: TerminalView, data: ArraySlice<UInt8>) {
-        viewModel.sendPtyInput(data: Data(data))
-    }
-}
-```
 
 ### Workspace Browser
 
@@ -172,7 +140,7 @@ xcodebuild -resolvePackageDependencies -workspace AntimatterApp.xcworkspace -sch
 | Connect | `ConnectView` | QR scanner + pairing flow + adapter selection |
 | Chat | `ChatView` + `ChatBubble` | Trajectory stream + message input |
 | Files | `FilesView` + `FileDetailView` | Workspace browser + file viewer |
-| Terminal | `TerminalView` | Native SwiftTerm PTY terminal |
+
 | Settings | `SettingsView` | App preferences, connection management |
 
 ---
@@ -186,7 +154,7 @@ xcodebuild -resolvePackageDependencies -workspace AntimatterApp.xcworkspace -sch
 | Navigation | AppCoordinator pattern |
 | Networking | URLSession WebSocket (async/await) |
 | Cryptography | CryptoKit (Ed25519, AES-GCM) |
-| Terminal | SwiftTerm |
+
 | Persistence | SwiftData / CoreData |
 | Biometrics | LocalAuthentication (Face ID, Touch ID) |
 | Camera | AVFoundation (QR scanner) |

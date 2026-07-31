@@ -16,7 +16,7 @@ This guide covers the testing strategies across the Antimatter monorepo — Gate
 Antimatter follows a **pragmatic testing pyramid**:
 
 - **Unit tests** for business logic — protocol parsing, message routing, crypto verification.
-- **Integration tests** for WebSocket protocol flows — auth handshake, message forwarding, PTY lifecycle.
+- **Integration tests** for WebSocket protocol flows — auth handshake, message forwarding.
 - **End-to-end tests** for critical paths — QR pairing, agent prompt round-trip.
 
 ---
@@ -39,7 +39,7 @@ uv run pytest --cov=antimatter_core   # With coverage
 | `auth.py` | Token verification, Ed25519 handshake, timing-safe compare |
 | `router.py` | Message routing to correct adapter, unknown type handling |
 | `tunnel.py` | Cloudflare tunnel lifecycle, reconnect logic |
-| `pty.py` | PTY session spawn, I/O forwarding, resize |
+
 
 ---
 
@@ -56,7 +56,7 @@ cd android/
 
 # Single module tests
 ./gradlew :core:network:testDebugUnitTest
-./gradlew :feature:terminal:testDebugUnitTest
+
 
 # Coverage report
 ./gradlew testDebugUnitTest jacocoTestReport
@@ -69,7 +69,7 @@ cd android/
 | `:core:network` | `BridgeWebSocket` auth flow, message deserialization |
 | `:core:data` | Room DAO queries, FTS search |
 | `:feature:chat` | `ChatViewModel` state transitions, step rendering |
-| `:feature:terminal` | `TerminalViewModel` PTY lifecycle |
+
 | `:feature:connect` | QR parsing, connection state machine |
 
 ---
@@ -91,7 +91,7 @@ xcodebuild test \
 |---|---|
 | `Crypto` | Ed25519 verification, AES-GCM decrypt |
 | `WebSocket` | Auth challenge flow, message deserialization |
-| `Terminal` | PTY session lifecycle, SwiftTerm integration |
+
 
 ---
 

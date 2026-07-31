@@ -54,27 +54,68 @@ We currently officially support:
 
 ---
 
-## 🚀 Quick Start (v0.1.4)
+## 🚀 Short Guide (TL;DR)
 
-Getting started is easier than ever with the new PyPI structure.
+1. **Install Android App:** Download the latest APK from [GitHub Releases](https://github.com/saifmukhtar/antimatter/releases) (F-Droid is currently outdated).
+2. **Install Gateway:** `pip install antimatter-gateway` (or use `uv`).
+3. **Start & Pair:** Run `antimatter-gateway start` (choose LAN/Cloudflare/Both). Then run `antimatter-gateway pair` (choose LAN/Cloudflare) and scan the QR code with your phone. *Your workspace is now securely accessible!*
+4. **Run Adapters:** 
+   - **Antigravity IDE (`ag`)**: Install `antimatter-ag` from OpenVSIX, start it from the IDE.
+   - **Antigravity 2.0 (`ag2`)**: `pip install antimatter-ag2`, run `antimatter-ag2 init` (once), then `antimatter-ag2 start` (daemon) or `antimatter-ag2 run_server`.
 
-### 1. Install the Gateway
-Install the core infrastructure using `uv` (or `pip`):
+> Note: Claude Code (`cc`) support is currently experimental and not fully working.
+
+---
+
+## 📖 Long Guide
+
+Getting started is simple, but it is important to understand the flow: you connect your phone to the **Gateway** first, and then you start the **Adapters** for your AI agents. You can run multiple adapters at the same time and switch between them seamlessly on your phone. If an adapter crashes, your phone's connection to the Gateway remains fully intact!
+
+### 1. Install the Android App
+Currently, the latest versions are only available via GitHub. Download the latest APK from our [GitHub Releases](https://github.com/saifmukhtar/antimatter/releases) and install it on your Android device.
+
+### 2. Install the Gateway
+Install the core infrastructure using `pip` or `uv`:
 ```bash
-uv tool install antimatter-gateway
+pip install antimatter-gateway
+```
+
+### 3. Start the Gateway
+```bash
 antimatter-gateway start
 ```
-*Upon starting, you will be prompted to dynamically select your preferred connection mode: Local Network (LAN), Cloudflare Tunnel, or Both.*
+*Upon starting, you will be prompted to choose your connection mode: (1) LAN, (2) Cloudflare, or Both. Once selected, the gateway will start.*
 
-### 2. Install Your Adapter
-Install the adapter for the AI you are using. For example, for the Antigravity IDE:
-- Download the `.vsix` from our [GitHub Releases](https://github.com/saifmukhtar/antimatter/releases) and install it in VS Code. It will automatically connect to your running Gateway!
+### 4. Pair Your Phone
+1. In a new terminal window, type `antimatter-gateway pair` to generate a secure QR code.
+2. *You will be prompted to choose which connection method to pair with (LAN or Cloudflare).*
+3. Scan the generated QR code with the app. 
 
-### 3. Pair Your Phone
-1. Download the **Antimatter Android App** from F-Droid or GitHub Releases.
-2. In your terminal running the gateway, type `antimatter-gateway pair` to generate a secure QR code.
-3. *Choose which connection method you want to pair with (LAN or Cloudflare).*
-4. Scan the code with the app. You are now cryptographically paired!
+You are now cryptographically paired! Even without any AI agents running, you can now instantly browse your workspace files from your phone.
+
+### 5. Install & Start Your Adapters
+
+Now you can attach your AI agents. The Gateway will automatically detect them.
+
+**For Antigravity IDE (`ag`)**
+This is the recommended experience. Install the `antimatter-ag` extension via OpenVSIX. Once installed, start it directly from your IDE. It will automatically connect to your running Gateway.
+
+**For Antigravity 2.0 (`ag2`)**
+Install the Python daemon:
+```bash
+pip install antimatter-ag2
+antimatter-ag2 init
+```
+*(The `init` command only needs to be run once).*
+Then, start the adapter:
+```bash
+antimatter-ag2 start       # Runs in the background
+# OR
+antimatter-ag2 run_server  # Runs in the foreground
+```
+
+> [!WARNING]
+> **Claude Code (`cc`) adapter** is currently under heavy development and may not function fully.
 
 > [!WARNING]
 > **Connection Mode Selection**
@@ -87,7 +128,6 @@ Install the adapter for the AI you are using. For example, for the Antigravity I
 > - **Fedora / RHEL (Firewalld):** `sudo firewall-cmd --add-port=8765/tcp --permanent && sudo firewall-cmd --reload`
 > 
 > *Alternatively, use Cloudflare Mode which bypasses local firewalls by creating an outbound tunnel.*
-
 
 ---
 
@@ -116,7 +156,6 @@ Explore the depths of the ecosystem:
 ## ✨ Core Features
 
 - **Real-Time Streaming**: Watch your agent's thought process character-by-character.
-- **Native Remote PTY Terminal**: Full `os/exec` integration directly to your host machine via `SwiftTerm` (iOS) and `Termux` (Android) with standard Linux shell commands over the secure E2EE tunnel.
 - **Zero Trust Security**: Ed25519 pairing prevents Man-In-The-Middle attacks even on compromised public networks.
 - **Seamless Tunnels**: Free Cloudflare Quick Tunnels provisioned automatically—no firewall configurations required.
 - **Offline History**: The Android app uses a local Room database to cache conversations and artifacts for offline viewing.
@@ -126,6 +165,10 @@ Explore the depths of the ecosystem:
 - **Live file tree** — browse your IDE workspace in real-time.
 - **File viewer** — tap any file to read its contents.
 - **File writing** — make quick edits on the go.
+
+> [!WARNING]
+> **Known Issue: Initial Workspace Loading**
+> When you first pair and open the app, navigating to the workspace might show a continuous loading state. If this occurs, simply tap the **Refresh** button and the workspace will appear instantly.
 
 > **Workspace Whitelisting**  
 > By default, the gateway restricts access to only the directory from which the adapter was started. To explicitly allow the Android App to browse and switch between specific directories, whitelist them by adding an `allowed_workspaces` array to your `~/.antimatter_daemon/config.json`:

@@ -24,7 +24,33 @@ Start here and follow the steps in order. The whole setup takes less than 5 minu
 
 ---
 
-## Step 1 — Install the Gateway
+## Step 1 — Install the Mobile App
+
+### Android
+
+Currently, the latest versions are only available via GitHub.
+
+1. Go to [GitHub Releases](https://github.com/saifmukhtar/antimatter/releases).
+2. Download the latest `antimatter-vX.X.X.apk`.
+3. Enable **Install from Unknown Sources** on your Android device.
+4. Open the APK to install.
+
+*(Note: The F-Droid version is currently outdated).*
+
+### iOS
+
+The iOS app is currently in early scaffolding stages. It will eventually mirror the full Android feature set. Build from source:
+
+```bash
+cd ios/
+open AntimatterApp.xcworkspace  # Open in Xcode 16+
+```
+
+See the [iOS App](/ios) page for detailed build instructions.
+
+---
+
+## Step 2 — Install & Start the Gateway
 
 The **Antimatter Gateway** (`antimatter-gateway`) is the secure infrastructure daemon. It manages Cloudflare tunnels, cryptographic keys, and routes messages between your phone and your AI adapters.
 
@@ -43,14 +69,11 @@ antimatter-gateway start
 ```
 
 When you run this command, you will be prompted to choose a connection mode:
-1. **Local Network (LAN) only** — Best for local testing over WiFi.
-2. **Cloudflare Tunnel only** — Requires running `antimatter-gateway setup` first.
+1. **Local Network (LAN)** — Best for local testing over WiFi.
+2. **Cloudflare Tunnel** — Connect from anywhere over the internet.
 3. **Both** — Available everywhere.
 
-The Gateway will then:
-- Start a local IPC server at `ws://127.0.0.1:8765` (or `0.0.0.0` if LAN mode is enabled)
-- (If selected) Spawn a Cloudflare tunnel to expose a public `wss://` endpoint
-- Generate and persist an Ed25519 keypair and 256-bit pairing token to your OS keychain
+The Gateway will then start a local IPC server at `http://127.0.0.1:8765`, generate keys, and optionally start a Cloudflare tunnel.
 
 :::tip[Runs in the Background]
 `antimatter-gateway start` automatically detaches and runs silently in the background. Use `antimatter-gateway status` to check if it is running, and `antimatter-gateway stop` to kill it.
@@ -58,70 +81,7 @@ The Gateway will then:
 
 ---
 
-## Step 2 — Install an Adapter
-
-The Gateway alone doesn't do anything without an adapter. Install the one matching your AI agent.
-
-:::note[What's an adapter?]
-Adapters are lightweight scripts that connect to the Gateway via local IPC and bridge it to a specific AI agent. See [Adapters](/adapters) for the full reference.
-:::
-
-### Antigravity IDE (`ag`) — VS Code Extension
-
-1. Download the latest `.vsix` from [GitHub Releases](https://github.com/saifmukhtar/antimatter/releases).
-2. In VS Code → Extensions panel → `···` → **Install from VSIX**.
-3. The extension automatically connects to the running Gateway on activation.
-
-### Antigravity 2.0 (`ag2`) — Python Daemon
-
-```bash
-uv tool install antimatter-ag2
-antimatter-ag2 start
-```
-
-### Claude Code (`cc`) — Node.js Daemon
-
-```bash
-npm install -g antimatter-cc
-antimatter-cc start
-```
-
----
-
-## Step 3 — Install the Mobile App
-
-### Android
-
-import { Tabs, TabItem } from '@astrojs/starlight/components';
-
-<Tabs>
-  <TabItem label="GitHub Releases (Recommended)">
-    1. Go to [GitHub Releases](https://github.com/saifmukhtar/antimatter/releases).
-    2. Download the latest `antimatter-vX.X.X.apk`.
-    3. Enable **Install from Unknown Sources** on your Android device.
-    4. Open the APK to install.
-  </TabItem>
-  <TabItem label="F-Droid">
-    1. Open [F-Droid](https://f-droid.org/packages/dev.saifmukhtar.antimatter/).
-    2. Search for **Antimatter** and tap Install.
-    3. 100% FOSS — no proprietary dependencies.
-  </TabItem>
-</Tabs>
-
-### iOS
-
-The iOS app is currently in early scaffolding stages. It will eventually mirror the full Android feature set. Build from source:
-
-```bash
-cd ios/
-open AntimatterApp.xcworkspace  # Open in Xcode 16+
-```
-
-See the [iOS App](/ios) page for detailed build instructions.
-
----
-
-## Step 4 — Pair Your Phone
+## Step 3 — Pair Your Phone
 
 With the Gateway running, generate a QR pairing code:
 
@@ -129,27 +89,58 @@ With the Gateway running, generate a QR pairing code:
 antimatter-gateway pair
 ```
 
-A QR code will appear in the terminal. It encodes:
-- The WebSocket URL (`wss://antimatter.yourdomain.com`)
-- Your 256-bit pairing token (hex-encoded)
-- The Gateway's Ed25519 public key
+1. You will be prompted to choose which connection method to pair with (LAN or Cloudflare).
+2. A QR code will appear in the terminal.
+3. In the **Antimatter app**, tap the **Scan QR Code** button and point your camera at the code.
 
-Then in the **Antimatter app**:
-1. Tap the **Scan QR Code** button.
-2. Point your camera at the code.
-3. The app performs an Ed25519 handshake with the Gateway.
-4. ✅ You're paired and ready to go!
+✅ You are now cryptographically paired! Even without any AI agents running, you can now instantly browse your workspace files from your phone.
+
+---
+
+## Step 4 — Install Your Adapters
+
+Now you can attach your AI agents. The Gateway will automatically detect them. You can run multiple at once.
+
+### Antigravity IDE (`ag`) — Recommended
+
+1. Install the `antimatter-ag` extension via **OpenVSIX** in your IDE.
+2. The extension automatically connects to the running Gateway on activation.
+
+### Antigravity 2.0 (`ag2`) — Python Daemon
+
+```bash
+pip install antimatter-ag2
+antimatter-ag2 init  # Run once
+```
+Then start it:
+```bash
+antimatter-ag2 start       # Background daemon
+# OR
+antimatter-ag2 run_server  # Foreground process
+```
+
+### Claude Code (`cc`) — Node.js Daemon
+
+:::danger[Experimental]
+The Claude Code adapter is currently under heavy development and may not function fully.
+:::
+
+```bash
+npm install -g antimatter-cc
+antimatter-cc start
+```
 
 ### Connecting without Cloudflare (Local Network)
 
 If your devices are on the same local network, you can bypass Cloudflare and connect directly over WebSockets. The Gateway listens on `0.0.0.0`, meaning it accepts connections from any device on your local network. 
 
-**Security Note:** Although the raw transport (`ws://`) is unencrypted, Antimatter applies Application-Layer End-to-End Encryption (Ed25519 authentication + X25519 ECDH) to every payload, so it remains completely secure over your local WiFi.
+**Security Note:** Although the raw transport (`http://`) is unencrypted, Antimatter applies Application-Layer End-to-End Encryption (Ed25519 authentication + X25519 ECDH) to every payload, so it remains completely secure over your local WiFi.
 
-When entering the manual connection URL, use the format `ws://<IP_ADDRESS>:8765`, where `<IP_ADDRESS>` depends on your device:
+When entering the manual connection URL, use the format `http://<IP_ADDRESS>:8765`, where `<IP_ADDRESS>` depends on your device:
 
-- **Android Emulator:** Use `ws://10.0.2.2:8765` (this special IP automatically routes to your computer's localhost).
-- **Physical Android (Same WiFi/Router):** Use your computer's local IP address (e.g., `ws://192.168.1.X:8765`). Find it using `ipconfig` (Windows) or `ip a` / `ifconfig` (Mac/Linux).
+- **Desktop/Web (Same Machine):** Use `http://localhost:8765` or `http://127.0.0.1:8765`.
+- **Android Emulator:** Use `http://10.0.2.2:8765` (this special IP automatically routes to your computer's localhost).
+- **Physical Android (Same WiFi/Router):** Use your computer's local IP address (e.g., `http://192.168.1.X:8765`). Find it using `ipconfig` (Windows) or `ip a` / `ifconfig` (Mac/Linux).
 
 ---
 

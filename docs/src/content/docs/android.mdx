@@ -1,6 +1,6 @@
 ---
 title: Android App
-description: Complete reference for the Antimatter Android app — Kotlin, Jetpack Compose, multi-module architecture, terminal, biometric auth, and more.
+description: Complete reference for the Antimatter Android app — Kotlin, Jetpack Compose, multi-module architecture, biometric auth, and more.
 sidebar:
   order: 3
 ---
@@ -42,7 +42,7 @@ The networking heart of the app.
 |---|---|
 | `BridgeWebSocket.kt` | OkHttp WebSocket client — connects to Gateway, performs `AUTH_CHALLENGE`/`AUTH_RESPONSE` Ed25519 handshake, decrypts E2EE payloads, emits `Flow<InboundMessage>` |
 | `BridgeService.kt` | Foreground `Service` that keeps the WebSocket alive when the app is backgrounded; surfaces push notifications for agent events |
-| `OutboundMessage.kt` | Sealed Kotlin class hierarchy for all outbound message types (`SendMessage`, `PtyStart`, `PtyInput`, `PtyResize`, `GetFiles`, etc.) |
+| `OutboundMessage.kt` | Sealed Kotlin class hierarchy for all outbound message types (`SendMessage`, `GetFiles`, `ReadFile`, `WriteFile`, etc.) |
 | `InboundMessage.kt` | Sealed class hierarchy for all inbound messages from the Gateway |
 
 ### `:core:data`

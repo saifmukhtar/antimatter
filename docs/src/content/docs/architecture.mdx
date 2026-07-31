@@ -72,7 +72,7 @@ The Gateway is the **brain of the operation**. It runs as a background process a
 
 ### Background Daemonization
 
-When started with `antimatter-gateway start`, the process immediately double-forks and detaches from the terminal. It tracks its process ID at `~/.antimatter_daemon/gateway.pid` and safely rotates its standard output/errors to `~/.antimatter_daemon/gateway.log` (capped at 5MB).
+When started with `antimatter-gateway start`, the process immediately double-forks and detaches from the console. It tracks its process ID at `~/.antimatter_daemon/gateway.pid` and safely rotates its standard output/errors to `~/.antimatter_daemon/gateway.log` (capped at 5MB).
 
 ### Cloudflare Tunnel
 
@@ -124,7 +124,7 @@ The **MessageRouter** inside the Gateway dispatches each inbound JSON frame:
 | `GET_AVAILABLE_AGENTS` | Gateway | Reply with list of connected adapters |
 | `GET_FILES`, `READ_FILE` | Target Adapter | Forward to adapter's IPC socket |
 | `SEND_MESSAGE` | Target Adapter | Inject prompt into the AI agent |
-| `PTY_START`, `PTY_INPUT`, `PTY_RESIZE` | Gateway PTY | Spawn/control remote terminal |
+
 | `PING` | Gateway | Reply `PONG` to keep tunnel alive |
 
 ---

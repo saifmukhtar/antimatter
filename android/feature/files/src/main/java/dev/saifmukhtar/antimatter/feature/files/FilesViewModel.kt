@@ -35,8 +35,17 @@ class FilesViewModel @Inject constructor(
     val uiState: StateFlow<FilesUiState> = _uiState.asStateFlow()
 
     init {
-        // Fetch current workspace and allowed workspaces
-        webSocket.sendMessage(OutboundMessage.ListAgents())
+        // Fetch current workspace and file tree when connected
+        viewModelScope.launch(Dispatchers.Main.immediate) {
+            webSocket.connectionState.collect { state ->
+                if (state == BridgeWebSocket.ConnectionState.CONNECTED) {
+                    webSocket.sendMessage(OutboundMessage.ListAgents())
+                    if (_uiState.value.fileTree == null) {
+                        loadFileTree(null)
+                    }
+                }
+            }
+        }
 
         viewModelScope.launch(Dispatchers.Main.immediate) {
             webSocket.messages.collect { message ->
