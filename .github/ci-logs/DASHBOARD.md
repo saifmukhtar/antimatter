@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-74%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-252-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-253-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 252 |
-| **Passed** | 188 |
+| **Total Runs** | 253 |
+| **Passed** | 189 |
 | **Failed** | 61 |
 | **Pass Rate** | 74% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-07-31 13:14 | Android CI | ✅ PASS | feat: complete removal of PTY terminal fix workspace sync update docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30633191957) |
 | 2026-07-31 13:08 | Graph Update: uv in /core #1497084451 | ✅ PASS | feat: complete removal of PTY terminal fix workspace sync update docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30633194596) |
 | 2026-07-31 13:07 | Adapters CI | ✅ PASS | feat: complete removal of PTY terminal fix workspace sync update docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30633192052) |
 | 2026-07-31 13:07 | iOS CI | ✅ PASS | feat: complete removal of PTY terminal fix workspace sync update docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30633192083) |
@@ -63,4 +64,3 @@
 | 2026-07-28 11:51 | npm_and_yarn in /docs for js-yaml - Update #1490430421 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30356368027) |
 | 2026-07-25 23:32 | Android CI | ❌ FAIL | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30179411175) |
 | 2026-07-25 23:26 | iOS CI | ✅ PASS | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30179411170) |
-| 2026-07-25 23:26 | npm_and_yarn in /adapters/cc for fast-uri - Update #1482293868 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30179383556) |
