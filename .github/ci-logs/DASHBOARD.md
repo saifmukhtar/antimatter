@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
-![Pass Rate](https://img.shields.io/badge/Pass%20Rate-74%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-259-blue)
+![Pass Rate](https://img.shields.io/badge/Pass%20Rate-75%25-brightgreen)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-260-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 259 |
-| **Passed** | 194 |
+| **Total Runs** | 260 |
+| **Passed** | 195 |
 | **Failed** | 62 |
-| **Pass Rate** | 74% |
+| **Pass Rate** | 75% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-08-04 13:23 | npm_and_yarn in /adapters/ag for undici - Update #1505821252 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30913458548) |
 | 2026-08-04 04:47 | npm_and_yarn in /adapters/cc for ip-address - Update #1504533830 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30878633108) |
 | 2026-08-04 04:25 | Android CI | ✅ PASS | build(deps): bump ip-address from 10.2.0 to 10.4.0 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30877532826) |
 | 2026-08-04 04:24 | Adapters CI | ✅ PASS | build(deps): bump ip-address from 10.2.0 to 10.4.0 in /adapters/cc | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30877532827) |
@@ -63,4 +64,3 @@
 | 2026-07-31 09:34 | Adapters CI | ✅ PASS | Bump pyasn1 from 0.6.3 to 0.6.4 in /adapters/ag2 (#20) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620373033) |
 | 2026-07-31 09:33 | Adapters CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/adapters/cc/fast-uri-3.1.4 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620349997) |
 | 2026-07-31 09:33 | Adapters CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/docs/multi-151545284e | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620346870) |
-| 2026-07-31 09:33 | iOS CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/adapters/ag/linkify-it-5.0.2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620338940) |
