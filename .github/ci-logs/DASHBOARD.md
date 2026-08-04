@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
-![Pass Rate](https://img.shields.io/badge/Pass%20Rate-75%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-264-blue)
+![Pass Rate](https://img.shields.io/badge/Pass%20Rate-74%25-brightgreen)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-265-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 264 |
+| **Total Runs** | 265 |
 | **Passed** | 198 |
-| **Failed** | 63 |
-| **Pass Rate** | 75% |
+| **Failed** | 64 |
+| **Pass Rate** | 74% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-08-04 14:17 | npm_and_yarn in /adapters/ag for undici - Update #1505976695 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30918042197) |
 | 2026-08-04 14:12 | npm_and_yarn in /adapters/ag for undici - Update #1505959880 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30917621090) |
 | 2026-08-04 13:25 | Android CI | ✅ PASS | build(deps-dev): bump undici from 7.28.0 to 7.29.0 in /adapters/ag | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30913546370) |
 | 2026-08-04 13:23 | Adapters CI | ✅ PASS | build(deps-dev): bump undici from 7.28.0 to 7.29.0 in /adapters/ag | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30913546399) |
@@ -63,4 +64,3 @@
 | 2026-07-31 09:35 | npm_and_yarn in /adapters/cc for hono - Update #1496798472 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620445265) |
 | 2026-07-31 09:35 | Adapters CI | ✅ PASS | Bump postcss from 8.5.15 to 8.5.25 in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620437087) |
 | 2026-07-31 09:34 | Core CI | ✅ PASS | Bump postcss from 8.5.15 to 8.5.25 in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620437064) |
-| 2026-07-31 09:34 | npm_and_yarn in /docs for postcss - Update #1496796947 | ✅ PASS | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/ag (#21) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620378897) |
