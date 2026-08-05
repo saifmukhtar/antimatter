@@ -281,3 +281,4 @@ Date,Workflow,Status,Commit,URL
 2026-08-05 13:07,Core CI,✅ PASS,build(deps-dev): bump undici from 7.28.0 to 7.29.0 in /adapters/ag (#28),https://github.com/saifmukhtar/antimatter/actions/runs/31008687749
 2026-08-05 13:07,iOS CI,✅ PASS,build(deps): bump hono from 4.12.32 to 4.13.0 in /adapters/cc (#29),https://github.com/saifmukhtar/antimatter/actions/runs/31008719650
 2026-08-05 13:08,npm_and_yarn in /adapters/cc for hono - Update #1508564658,✅ PASS,build(deps): bump hono from 4.12.32 to 4.13.0 in /adapters/cc (#29),https://github.com/saifmukhtar/antimatter/actions/runs/31008719868
+2026-08-05 13:08,Adapters CI,✅ PASS,build(deps): bump cryptography from 49.0.0 to 50.0.0 in /core (#30),https://github.com/saifmukhtar/antimatter/actions/runs/31008773526
