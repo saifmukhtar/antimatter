@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-75%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-272-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-273-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 272 |
-| **Passed** | 205 |
+| **Total Runs** | 273 |
+| **Passed** | 206 |
 | **Failed** | 64 |
 | **Pass Rate** | 75% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-08-05 05:26 | uv in /adapters/ag2 for cryptography - Update #1507721647 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30978060861) |
 | 2026-08-05 05:08 | Android CI | ✅ PASS | build(deps): bump cryptography from 49.0.0 to 50.0.0 in /core | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30977090719) |
 | 2026-08-05 05:06 | Adapters CI | ✅ PASS | build(deps): bump cryptography from 49.0.0 to 50.0.0 in /core | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30977090716) |
 | 2026-08-05 05:06 | iOS CI | ✅ PASS | build(deps): bump cryptography from 49.0.0 to 50.0.0 in /core | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30977090706) |
@@ -63,4 +64,3 @@
 | 2026-07-31 09:42 | Android CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/adapters/cc/fast-uri-3.1.4 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620349978) |
 | 2026-07-31 09:41 | Android CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/adapters/cc/hono-4.12.31 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620324595) |
 | 2026-07-31 09:40 | Android CI | ❌ FAIL | Bump fast-uri from 3.1.2 to 3.1.4 in /adapters/ag (#21) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620377577) |
-| 2026-07-31 09:39 | Android CI | ❌ FAIL | Merge branch 'main' into dependabot/npm_and_yarn/adapters/ag/linkify-it-5.0.2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30620340276) |
