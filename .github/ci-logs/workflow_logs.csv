@@ -268,3 +268,4 @@ Date,Workflow,Status,Commit,URL
 2026-08-04 18:06,iOS CI,✅ PASS,build(deps): bump hono from 4.12.32 to 4.13.0 in /adapters/cc,https://github.com/saifmukhtar/antimatter/actions/runs/30936978689
 2026-08-04 18:07,Android CI,✅ PASS,build(deps): bump hono from 4.12.32 to 4.13.0 in /adapters/cc,https://github.com/saifmukhtar/antimatter/actions/runs/30936978327
 2026-08-05 05:06,uv in /core for cryptography - Update #1507683994,✅ PASS,chore: update workflow dashboard,https://github.com/saifmukhtar/antimatter/actions/runs/30977031375
+2026-08-05 05:06,iOS CI,✅ PASS,build(deps): bump cryptography from 49.0.0 to 50.0.0 in /core,https://github.com/saifmukhtar/antimatter/actions/runs/30977090706
