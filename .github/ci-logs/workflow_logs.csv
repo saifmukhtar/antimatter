@@ -279,3 +279,4 @@ Date,Workflow,Status,Commit,URL
 2026-08-05 13:06,iOS CI,✅ PASS,build(deps): bump ip-address from 10.2.0 to 10.4.0 in /adapters/cc (#27),https://github.com/saifmukhtar/antimatter/actions/runs/31008611899
 2026-08-05 13:06,Adapters CI,✅ PASS,build(deps): bump ip-address from 10.2.0 to 10.4.0 in /adapters/cc (#27),https://github.com/saifmukhtar/antimatter/actions/runs/31008611909
 2026-08-05 13:07,Core CI,✅ PASS,build(deps-dev): bump undici from 7.28.0 to 7.29.0 in /adapters/ag (#28),https://github.com/saifmukhtar/antimatter/actions/runs/31008687749
+2026-08-05 13:07,iOS CI,✅ PASS,build(deps): bump hono from 4.12.32 to 4.13.0 in /adapters/cc (#29),https://github.com/saifmukhtar/antimatter/actions/runs/31008719650
