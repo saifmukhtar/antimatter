@@ -5,7 +5,7 @@ name = "antimatter-shared-config"
 dependencies = [
     "pydantic>=2.0.0",
     "keyring>=24.0.0",
-    "cryptography>=41.0.0"
+    "cryptography>=50.0.0"
 ]
 
 
