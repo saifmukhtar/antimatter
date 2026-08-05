@@ -285,3 +285,4 @@ Date,Workflow,Status,Commit,URL
 2026-08-05 13:08,iOS CI,✅ PASS,build(deps): bump cryptography from 49.0.0 to 50.0.0 in /adapters/ag2 (#31),https://github.com/saifmukhtar/antimatter/actions/runs/31008806636
 2026-08-05 13:09,Graph Update: uv in /core #1508567609,✅ PASS,build(deps): bump cryptography from 49.0.0 to 50.0.0 in /core (#30),https://github.com/saifmukhtar/antimatter/actions/runs/31008778924
 2026-08-05 13:09,Graph Update: uv in /adapters/ag2 #1508569559,✅ PASS,build(deps): bump cryptography from 49.0.0 to 50.0.0 in /adapters/ag2 (#31),https://github.com/saifmukhtar/antimatter/actions/runs/31008810192
+2026-08-05 13:10,iOS CI,✅ PASS,build(deps): bump fast-uri from 3.1.4 to 3.1.5 in /adapters/cc (#32),https://github.com/saifmukhtar/antimatter/actions/runs/31008920355
