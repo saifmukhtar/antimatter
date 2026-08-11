@@ -1,19 +1,20 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-76%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-289-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-290-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 289 |
+| **Total Runs** | 290 |
 | **Passed** | 221 |
-| **Failed** | 65 |
+| **Failed** | 66 |
 | **Pass Rate** | 76% |
 
 ## Recent Runs
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-08-11 17:48 | npm_and_yarn in /adapters/ag for js-yaml - Update #1520380257 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/31519328719) |
 | 2026-08-05 13:11 | Android CI | ✅ PASS | build(deps): bump fast-uri from 3.1.4 to 3.1.5 in /adapters/cc (#32) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/31008920252) |
 | 2026-08-05 13:10 | Adapters CI | ✅ PASS | build(deps): bump fast-uri from 3.1.4 to 3.1.5 in /adapters/cc (#32) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/31008920399) |
 | 2026-08-05 13:10 | iOS CI | ✅ PASS | build(deps): bump fast-uri from 3.1.4 to 3.1.5 in /adapters/cc (#32) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/31008920355) |
@@ -63,4 +64,3 @@
 | 2026-07-31 09:53 | Android CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/adapters/ag/linkify-it-5.0.2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30621046789) |
 | 2026-07-31 09:53 | Android CI | ✅ PASS | chore(deps): bump mcp from 1.28.0 to 1.28.1 in /adapters/ag2 (#14) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30621081546) |
 | 2026-07-31 09:53 | Android CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/adapters/cc/hono-4.12.31 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30621037797) |
-| 2026-07-31 09:52 | Android CI | ✅ PASS | chore(deps): bump hono from 4.12.25 to 4.12.31 in /adapters/cc (#17) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30621091859) |
