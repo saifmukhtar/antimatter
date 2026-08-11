@@ -290,3 +290,4 @@ Date,Workflow,Status,Commit,URL
 2026-08-05 13:11,Android CI,✅ PASS,build(deps): bump fast-uri from 3.1.4 to 3.1.5 in /adapters/cc (#32),https://github.com/saifmukhtar/antimatter/actions/runs/31008920252
 2026-08-11 17:48,npm_and_yarn in /adapters/ag for js-yaml - Update #1520380257,❌ FAIL,chore: update workflow dashboard,https://github.com/saifmukhtar/antimatter/actions/runs/31519328719
 2026-08-11 19:11,npm_and_yarn in /docs for js-yaml - Update #1520528647,✅ PASS,chore: update workflow dashboard,https://github.com/saifmukhtar/antimatter/actions/runs/31526489362
+2026-08-11 19:11,Core CI,✅ PASS,build(deps): bump js-yaml from 4.3.0 to 4.3.1 in /docs,https://github.com/saifmukhtar/antimatter/actions/runs/31526565625

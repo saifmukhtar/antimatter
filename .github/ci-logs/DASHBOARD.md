@@ -1,12 +1,12 @@
 # 🔄 CI/CD WORKFLOW DASHBOARD
 
 ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-76%25-brightgreen)
-![Total Runs](https://img.shields.io/badge/Total%20Runs-291-blue)
+![Total Runs](https://img.shields.io/badge/Total%20Runs-292-blue)
 
 | Metric | Count |
 |--------|-------|
-| **Total Runs** | 291 |
-| **Passed** | 222 |
+| **Total Runs** | 292 |
+| **Passed** | 223 |
 | **Failed** | 66 |
 | **Pass Rate** | 76% |
 
@@ -14,6 +14,7 @@
 
 | Date (UTC) | Workflow | Status | Commit | URL |
 |------------|----------|--------|--------|-----|
+| 2026-08-11 19:11 | Core CI | ✅ PASS | build(deps): bump js-yaml from 4.3.0 to 4.3.1 in /docs | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/31526565625) |
 | 2026-08-11 19:11 | npm_and_yarn in /docs for js-yaml - Update #1520528647 | ✅ PASS | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/31526489362) |
 | 2026-08-11 17:48 | npm_and_yarn in /adapters/ag for js-yaml - Update #1520380257 | ❌ FAIL | chore: update workflow dashboard | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/31519328719) |
 | 2026-08-05 13:11 | Android CI | ✅ PASS | build(deps): bump fast-uri from 3.1.4 to 3.1.5 in /adapters/cc (#32) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/31008920252) |
@@ -63,4 +64,3 @@
 | 2026-07-31 09:54 | Android CI | ✅ PASS | Bump sharp @astrojs/starlight and astro in /docs (#22) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30621108653) |
 | 2026-07-31 09:54 | Android CI | ✅ PASS | Bump linkify-it from 5.0.1 to 5.0.2 in /adapters/ag (#19) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30621097391) |
 | 2026-07-31 09:53 | Android CI | ✅ PASS | Merge branch 'main' into dependabot/npm_and_yarn/adapters/ag/linkify-it-5.0.2 | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30621046789) |
-| 2026-07-31 09:53 | Android CI | ✅ PASS | chore(deps): bump mcp from 1.28.0 to 1.28.1 in /adapters/ag2 (#14) | [View Log](https://github.com/saifmukhtar/antimatter/actions/runs/30621081546) |
