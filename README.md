@@ -7,6 +7,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/saifmukhtar/antimatter)
 
+> [!TIP]
+> ### 🚀 Recommended: [Ultimate Antimatter](https://github.com/saifmukhtar/ultimate-antimatter)
+> Looking for the fastest, zero-config setup? Check out [**Ultimate Antimatter**](https://github.com/saifmukhtar/ultimate-antimatter) — a single standalone binary with a dedicated desktop GUI control panel, pre-bundled TLS, HTTP/2 multiplexing, and direct P2P Tailscale MagicDNS for zero-lag remote coding.
+
 > [!WARNING]
 > **Community Project Disclaimer**
 > Antimatter is an unofficial, community-driven, open-source project. It is **NOT** an official product of Google, Anthropic, or any AI provider.
