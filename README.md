@@ -7,9 +7,17 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/saifmukhtar/antimatter)
 
-> [!TIP]
-> ### 🚀 Recommended: [Ultimate Antimatter](https://github.com/saifmukhtar/ultimate-antimatter)
-> Looking for the fastest, zero-config setup? Check out [**Ultimate Antimatter**](https://github.com/saifmukhtar/ultimate-antimatter) — a single standalone binary with a dedicated desktop GUI control panel, pre-bundled TLS, HTTP/2 multiplexing, and direct P2P Tailscale MagicDNS for zero-lag remote coding.
+> [!IMPORTANT]
+> ### 🚀 Antimatter has evolved into [Ultimate Antimatter](https://github.com/saifmukhtar/ultimate-antimatter)!
+> 
+> Instead of maintaining an emulated native Android app with limited features and ongoing maintenance overhead, **[Ultimate Antimatter](https://github.com/saifmukhtar/ultimate-antimatter)** serves the **real, 100% feature-complete desktop IDE directly to your mobile device**:
+> 
+> * **✨ 100% 1:1 Desktop Parity Out-of-the-Box:** Model switching, subagent visualizers, prompt previews, extensions, full settings, and terminals work natively with zero emulated UI bugs.
+> * **📱 PWA Superpower (Add to Home Screen):** Open the bridge URL on Android or iOS (Chrome/Safari) and tap **"Add to Home Screen"** for an instant, full-screen standalone mobile app experience.
+> * **⚡ Single Standalone Executable:** Zero Python/daemon dependencies, zero `pip` installations. Just run `./bin/antimatter` with an official desktop GUI control panel.
+> * **🌍 Ultra-Fast Tailscale + Local TLS:** Direct P2P WireGuard (~20ms ping) + Local Wi-Fi HTTP/2 multiplexing with automated trusted TLS.
+> 
+> 👉 **Switch to the new repository:** [**github.com/saifmukhtar/ultimate-antimatter**](https://github.com/saifmukhtar/ultimate-antimatter)
 
 > [!WARNING]
 > **Community Project Disclaimer**
